@@ -1,0 +1,23 @@
+package cn.easybuy.dao;
+
+import java.util.List;
+
+import cn.easybuy.entity.ProListfenji;
+
+public interface ProListfenjiDao {
+    //三级的第一级
+	public List<ProListfenji> findAll() throws Exception;
+	//三级的第二级和第三级
+	public List<ProListfenji> findPart(int id)throws Exception;
+	//商品分类的分页
+	public List<ProListfenji> getOneDate(int pageindex, int pagesize)throws Exception;
+	//商品分类的总记录数
+	public int totalRecord() throws Exception;
+	//商品的二级
+	public List<ProListfenji> findSecond() throws Exception;
+	//添加分类
+	public boolean add(ProListfenji pfj)throws Exception;
+	
+	//删除分类
+	public boolean del(int id);
+}

@@ -1,0 +1,23 @@
+package cn.easybuy.service.impl;
+
+import java.util.List;
+
+import cn.easybuy.dao.BaseDao;
+import cn.easybuy.dao.ProListfenjiDao;
+import cn.easybuy.dao.RegisterinfoDao;
+import cn.easybuy.dao.impl.ProListfenjiDaoimpl;
+import cn.easybuy.dao.impl.RegisterinfoDaoimpl;
+import cn.easybuy.entity.ProListfenji;
+import cn.easybuy.service.ProListfenjiService;
+
+public class ProListfenjiServiceImpl extends BaseDao implements ProListfenjiService{
+	ProListfenjiDao dao=new ProListfenjiDaoimpl();
+	public List<ProListfenji> findAll() throws Exception {
+		return dao.findAll();
+	}
+	public List<ProListfenji> findPart(int id) throws Exception {
+		
+		return dao.findPart(id);
+	}
+
+}

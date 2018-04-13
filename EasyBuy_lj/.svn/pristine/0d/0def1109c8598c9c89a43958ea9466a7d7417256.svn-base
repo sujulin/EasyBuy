@@ -1,0 +1,9 @@
+package cn.easybuy.dao;
+
+import cn.easybuy.entity.Phoneinfo;
+
+public interface PhoneInfoDao {
+
+	public boolean Select(Phoneinfo info) throws Exception;
+	
+}

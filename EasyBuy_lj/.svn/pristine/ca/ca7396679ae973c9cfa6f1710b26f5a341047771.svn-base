@@ -1,0 +1,199 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>unique</title>
+<link type="text/css" href="css/css.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+
+<body>
+ <div class="hrader" id="header">
+  <a href="login.html" style="color:#FD7306;margin-left:20px;">è¯·ç»å½</a> 
+  <a href="reg.html">æ³¨å</a>
+  <div class="topNav">
+   <a href="index.html" style="color:#FD7306;">é¦é¡µ</a>
+   <a href="buy.html">ä¹°å®¶</a>
+   <a href="sell.html">åå®¶</a>
+   <a href="vip.html">ä¼åä¸­å¿</a>
+   <a href="xuanshang.html">æ¬èµæ¦</a>
+   <a href="luntan.html" class="luntan">è®ºå</a>
+   <a href="help.html">å¸®å©</a>
+   <a href="#">&nbsp;</a>
+   <a href="#" class="lan">ä¸­æ</a>
+   <a href="#" class="lan">English</a>
+  </div><!--topNav/-->
+ </div><!--hrader/-->
+ <div class="mainCont">
+  <h1 class="logo" style="text-align:left;">
+  <a href="index.html"><img src="images/logo.png" width="304" height="74" /></a>
+  </h1>
+  <div class="loginBuy">
+  <div class="loginBuyLeft">
+   <ul class="regEq">
+    <li class="regEqBg1">ä¾åºå</li>
+    <li class="regEqBg2">éè´­å</li>
+    <div class="clears"></div>
+   </ul><!--regEq/-->
+   <form action="#" method="get" class="regForm">
+    <div class="loginBuyList">
+     <label for="name">ç¨æ·åï¼</label>
+     <input type="text" id="name" />
+    </div><!--loginBuyList/-->
+    <div class="loginBuyList">
+     <label for="email">é®ç®±ï¼</label>
+     <input type="text" id="email" />
+    </div><!--loginBuyList/-->
+    <div class="loginBuyList">
+     <label for="tel">ææºå·ç ï¼</label>
+     <input type="text" id="tel" />
+    </div><!--loginBuyList/-->
+    <div class="loginBuyList">
+     <label for="pwd">è®¾ç½®å¯ç ï¼</label>
+     <input type="text" id="pwd" />
+    </div><!--loginBuyList/-->
+    <div class="loginBuyList" style="border:#DEDEDE 1px solid;">
+     <label for="pwd1">ç¡®è®¤å¯ç ï¼</label>
+     <input type="text" id="pwd1" />
+    </div><!--loginBuyList/-->
+    
+    <div class="loginBuyyan">
+     <label for="yanzheng">éªè¯ç ï¼</label>
+     <input type="text" id="yanzheng" />
+     <div class="yanzhengma">
+      <img src="images/yanzheng.jpg" width="124" height="52" />
+      <span>æ¢ä¸å¼ </span>
+     </div>
+    </div><!--loginBuyList/-->
+    <div class="falv">
+     <input type="checkbox" /> <span>æå·²éè¯»å¹¶åæ<a href="xieyi.html" target="_blank">ãuniqueZiåè®®ã</a></span>
+    </div><!--falv/-->
+    <div class="regSubs">
+     <input type="button" value=" æ³¨ å " />
+    </div><!--regSub/-->
+   </form><!--/-->
+   
+   <form action="#" method="get" class="regForm">
+    <div class="loginBuyList">
+     <label for="name">ç¨æ·åï¼</label>
+     <input type="text" id="name" />
+    </div><!--loginBuyList/-->
+    <div class="loginBuyList">
+     <label for="email">é®ç®±ï¼</label>
+     <input type="text" id="email" />
+    </div><!--loginBuyList/-->
+    <div class="loginBuyList">
+     <label for="tel">ææºå·ç ï¼</label>
+     <input type="text" id="tel" />
+    </div><!--loginBuyList/-->
+    <div class="loginBuyList">
+     <label for="pwd">è®¾ç½®å¯ç ï¼</label>
+     <input type="text" id="pwd" />
+    </div><!--loginBuyList/-->
+    <div class="loginBuyList" style="border:#DEDEDE 1px solid;">
+     <label for="pwd1">ç¡®è®¤å¯ç ï¼</label>
+     <input type="text" id="pwd1" />
+    </div><!--loginBuyList/-->
+    
+    <div class="loginBuyyan">
+     <label for="yanzheng">éªè¯ç ï¼</label>
+     <input type="text" id="yanzheng" />
+     <div class="yanzhengma">
+      <img src="images/yanzheng.jpg" width="124" height="52" />
+      <span>æ¢ä¸å¼ </span>
+     </div>
+    </div><!--loginBuyList/-->
+    <div class="falv">
+     <input type="checkbox" /> <span>æå·²éè¯»å¹¶åæ<a href="xieyi.html" target="_blank">ãuniqueZiåè®®ã</a></span>
+    </div><!--falv/-->
+    <div class="regSubs">
+     <input type="button" value=" æ³¨ å " />
+    </div><!--regSub/-->
+   </form><!--/-->
+  </div><!--loginBuyLeft-->
+  <div class="loginBuyRight">
+   <div class="regDl">
+    <a href="login.html"><img src="images/dl.jpg" width="180" height="60" /></a>
+    <p>å·²æ<a href="login.html">ä¾åºå</a>è´¦å·ç¹å»ç»å½ï¼</p>
+   </div><!--regDl/-->
+   <div class="regDl">
+    <a href="login.html"><img src="images/dl.jpg" width="180" height="60" /></a>
+    <p>å·²æ<a href="login.html">éè´­å</a>è´¦å·ç¹å»ç»å½ï¼</p>
+   </div><!--regDl/-->
+  </div><!--loginBuyRight/-->
+  <div class="clears"></div>
+  </div><!--loginBuy/-->
+ </div><!--mainCont/-->
+ <div class="footBox">
+  <div class="footers">
+   <div class="footersLeft">
+    <a href="index.html"><img src="images/ftlogo.jpg" width="240" height="64" /></a>
+    <h3 class="ftphone">400 000 0000 </h3>
+    <div class="ftKe">
+     å®¢æ 7x24å°æ¶(å¨å¹´æ ä¼)<br />
+     <span>å®¢æé®ç®±ï¼kefu@webqin.net </span>
+    </div><!--ftKe/-->
+   </div><!--footersLeft/-->
+   <div class="footersRight">
+    <ul>
+     <li class="ftTitle">æ°ææå</li>
+     <li><a href="#">è´­ç©æµç¨</a></li>
+     <li><a href="#">ä¼åè®¡åååå</a></li>
+     <li><a href="#">ä¼æ å¸è§å</a></li>
+     <li><a href="#">èç³»å®¢æ</a></li>
+     <li><a href="#">å¸¸è§é®é¢</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ä»æ¬¾æ¹å¼</li>
+     <li><a href="#">å¨çº¿æ¯ä»</a></li>
+     <li><a href="#">ç¤¼åå¡æ¯ä»</a></li>
+     <li><a href="#">è´§å°ä»æ¬¾</a></li>
+     <li><a href="#">é¶è¡ä»æ¬¾</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ééæå¡</li>
+     <li><a href="#">ééæ¶æåè¿è´¹</a></li>
+     <li><a href="#">è¶æ¶èµä»</a></li>
+     <li><a href="#">éªè´§ä¸ç­¾æ¶</a></li>
+     <li><a href="#">éè´§ä¿¡æ¯è·è¸ª</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">å®åæå¡</li>
+     <li><a href="#">éæ¢è´§æ¿ç­</a></li>
+     <li><a href="#">éæ¢è´§åºå</a></li>
+     <li><a href="#">éæ¬¾æ¶é</a></li>
+     <li><a href="#">åè¡èµä»</a></li>
+     <li><a href="#">åç¥¨è¯´æ</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ç¹è²æå¡</li>
+     <li><a href="#">ç¤¼åå¡</a></li>
+     <li><a href="#">äº§åè¯ç¨</a></li>
+     <li><a href="#">è±ç²ä¸­å¿</a></li>
+     <li><a href="#">å¿«éè´­ç©</a></li>
+     <li><a href="#">æ¨èå¥½å</a></li>
+    </ul>
+    
+    <div class="clears"></div>
+   </div><!--footersRight/-->
+   <div class="clears"></div>
+  </div><!--footers/-->
+ </div><!--footBox/-->
+ <div class="footer" style="text-align:left;">
+  <a href="#">å³äºæä»¬</a>
+  <a href="#">åæé¾æ¥</a>
+  <a href="#">çæå£°æ</a>
+  <a href="#">ç½ç«å°å¾</a>
+  <br />
+  <span>&copy; 2014 Unqezi ä½¿ç¨åå¿è¯» æ²ªICPå¤ 12007626å·-1</span>
+ </div><!--footer/-->
+</body>
+</html>

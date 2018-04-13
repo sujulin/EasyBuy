@@ -1,0 +1,85 @@
+package cn.easybuy.servlet;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import cn.easybuy.entity.ProListfenji;
+import cn.easybuy.entity.Prolist;
+import cn.easybuy.service.ProListfenjiService;
+import cn.easybuy.service.ProlistinfoService;
+import cn.easybuy.service.impl.ProListfenjiServiceImpl;
+import cn.easybuy.service.impl.prolistinfoServiceImpl;
+
+
+public class ProListfenjiServlet extends HttpServlet {
+
+	
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		doPost(request,response);
+	}
+
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+            ProListfenjiService pro=new ProListfenjiServiceImpl();
+            System.out.println("22222");
+            
+            try {
+				//获取到一级集合
+				List<ProListfenji> menus1=pro.findAll();
+				//获取到二级集合
+				List<ProListfenji> menus2=null;
+				//获取到三级集合
+				List<ProListfenji> menus3=null;
+				Map<Integer,List<ProListfenji>> map1 = new HashMap<Integer,List<ProListfenji>>();
+				Map<Integer,List<ProListfenji>> map2 = new HashMap<Integer,List<ProListfenji>>();
+ 			    Set<Integer> set1=map1.keySet();  
+				Set<Integer> set2=map2.keySet();  
+				for(ProListfenji item1:menus1){
+					menus2=pro.findPart(item1.getId());
+					map1.put(item1.getId(), menus2);
+					request.setAttribute("map1", map1);
+					request.setAttribute("menus2", menus2);
+				}
+				for(Integer it:set1){
+					for(ProListfenji item2:map1.get(it)){
+						menus3=pro.findPart(item2.getId());
+						map2.put(item2.getId(),menus3);
+						request.setAttribute("map2", map2);
+					}
+				}
+				
+				for(Integer it:set2){
+					for(ProListfenji item3:map2.get(it)){
+						System.out.println(it+"---------"+item3.getParentId()+item3.getId()+"---------"+item3.getName());
+					}
+				}
+				ProlistinfoService service=new prolistinfoServiceImpl();
+	    		List<Prolist> list4=service.findAll();
+	            request.setAttribute("list4", list4);
+				request.getSession().setAttribute("menus1", menus1);
+				request.getSession().setAttribute("set1", set1);
+				request.getSession().setAttribute("set2", set2);
+				request.getRequestDispatcher("/prolist.jsp").forward(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+   }
+            
+            
+           
+    		
+    	  
+		
+	}
+
+

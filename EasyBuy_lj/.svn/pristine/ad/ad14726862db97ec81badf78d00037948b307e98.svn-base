@@ -1,0 +1,13 @@
+package cn.easybuy.dao;
+
+import java.util.Map;
+
+
+
+import cn.easybuy.entity.Phoneinfo;
+
+public interface PhoneInfoDao {
+
+	
+	public Map<String,Phoneinfo> Select(int pid);
+}

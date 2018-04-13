@@ -1,0 +1,203 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>unique</title>
+<link type="text/css" href="css/css.css" rel="stylesheet" />
+<script type="text/javascript" src="js/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+
+</head>
+
+<body>
+ <div class="hrader" id="header">
+  <div class="top">
+   <a href="login.html" style="color:#C94E13;">è¯·ç»å½</a> 
+   <a href="reg.html">æ³¨å</a>
+   <ul class="topNav">
+    <li><a href="order.html">æçè®¢å </a></li>
+    <li class="gouwuche"><a href="car.html">è´­ç©è½¦</a> <strong style="color:#C94E13;">3</strong></li>
+    <li class="shoucangjia"><a href="shoucang.html">æ¶èå¤¹</a></li>
+    <li class="kefus"><a href="#">èç³»å®¢æ</a></li>
+<li><a href="#" class="lan">ä¸­æ</a></li>
+    <li><a href="#" class="lan">English</a></li>
+    <div class="clears"></div>
+   </ul><!--topNav/-->
+  </div><!--top/-->
+ </div><!--hrader/-->
+ <div class="mid">
+  <h1 class="logo" style="text-align:left;">
+  <a href="index.html"><img src="images/logo.png" width="304" height="74" /></a>
+  </h1>
+  <form action="#" method="get" class="subBox">
+   <div class="subBox2">
+    <input type="text" class="subText" />
+    <input type="image" src="images/sub.jpg" width="95" height="32" class="subImg" />
+    <div class="hotci">
+    <a href="#">é·æ´¾å¤§ç¥</a>
+    <a href="#">ä¸æs5</a>
+    <a href="#">è¯ºåºäº1020</a>
+    <a href="#">Iphone 6</a>
+    <a href="#">htc one</a>
+   </div><!--hotci/-->
+   </div><!--subBox2/-->
+  </form><!--subBox/-->
+  <div class="ding-gou">
+   <div class="ding">
+    <a href="order.html"><img src="images/dingdan.jpg" width="106" height="32" /></a>
+   </div><!--ding/-->
+   <div class="gou">
+    <a href="car.html"><img src="images/gouwuche.jpg" width="126" height="32" /></a>
+   </div><!--gou/-->
+   <div class="clears"></div>
+  </div><!--ding-gou/-->
+ </div><!--mid-->
+ <div class="navBox navBg3">
+  <ul class="nav">
+   <li><a href="index.html">é¦é¡µ</a></li>
+   <li><a href="buy.html">ä¹°å®¶</a></li>
+   <li><a href="sell.html">åå®¶</a></li>
+   <li><a href="vip.html">ä¼åä¸­å¿</a></li>
+   <li><a href="xuanshang.html">æ¬èµæ¦</a></li>
+   <li><a href="luntan.html" class="luntan">è®ºå</a></li>
+   <li class="navCur"><a href="help.html">å¸®å©</a></li>
+   <div class="clears"></div>
+  </ul><!--nav/-->
+ </div><!--navBox/-->
+ <div class="helpBox">
+  <div class="helpLeft">
+   <ul class="helpNav">
+    <li class="helpCur"><a href="#">æ°æå¥é¨</a></li>
+    <li><a href="#">è´­ç©æµç¨</a></li>
+    <li><a href="#">ä¼åè®¡åååå</a></li>
+    <li><a href="#">ä¼æ å¸è§å</a></li>
+    <li><a href="#">èç³»å®¢æ</a></li>
+    <li><a href="#">å¸¸è§é®é¢</a></li>
+   </ul><!--helpNav/-->
+  </div><!--helpLeft/-->
+  <div class="helpRight">
+   <div class="helpPar">
+     <ol>
+       <li>
+         <div>
+         <div>
+         <a href="#" target="_self"></li>
+       <li>
+         <div><strong>uniqueè´­ç©æµç¨ æå­ç<br />
+           </strong>ç¬¬â ãå»ï¼www.unique.com)æ³¨åuniqueä¼åï¼è¿ä¸ªä¸ç¨æå§ï¼æé®ç®±å°±è¡å¯ï¼ç¶åå»é®ç®±æ¿æ´»å¸å·<br />
+           ç¬¬â¡ãå»é¿éå·´å·´æä¸æ¯ä»å®ç½ç«(www.alipay.com)æ³¨åå¼éæ¯ä»å®å¸å·ï¼è¿å¥æ¯ä»å®ç®¡çå¸æ·ï¼ä½ è¦æä¸å¼ é¶è¡å¡ï¼å¹¶ä¸é¶è¡å¡è¦å·²å¼éç½ä¸çµå­é¶è¡åè½,ç¶åå°±æ¯éè¿é¶è¡å¡çéªè¯ã<br />
+           ç¬¬â¢ãæ¯ä»å®ä¼å¾ä½ é¶è¡å¡éæç¹é±ï¼1åå°1è§ä¹é´ï¼ä½ è¦å»æ¥ä¸å¸ï¼------è¿ä¸æ­¥æ¯æ¯ä»å®è®¤è¯ãå¦æçå°ä½ çé¶è¡å¡ææ¯ä»å®å¬å¸ç»ä½ æå¥çå¼éç¡®è®¤æ¬¾ï¼è¯´æä½ çé¶è¡å¡å·²ç»å®æ¯ä»å®ï¼å¯ä»¥æ­£å¸¸ä½¿ç¨äºã<br />
+           ç¬¬â£ãç°å¨ï¼å¯ä»¥ä¹°ä¸è¥¿å¦,éå¥½èªå·±åæ¬¢çä¸è¥¿ï¼å°±è·ææèç³»ãé®å¥½è´¨éãä»·æ ¼ãé®è´¹ç­ç­ã<br />
+           ç¬¬â¤ãè´­ä¹°ãç¹ååé¡µé¢ä¸ç«å³è´­ä¹°ãéæ©çé®å¯æ¹å¼ï¼è¿æèªå·±çå°åï¼åå­ï¼çµè¯ãçµè¯å¾éè¦ï¼ä¸ç¶å¿«éä¼æ¾ä¸å°ä½ ã<br />
+           ç¬¬â¥ãä¸é¢å¯ä»¥ç¹ä»æ¬¾äºãè¿éä»æ¬¾ãææä¸è½æ¿å°é±ãï¼ä½ çé±æ¯æå°æ¯ä»å®é£éçï¼ä»æä¸åºæ¥ã<br />
+           ç¬¬â¦ãç­ææç»ä½ åè´§ï¼ä½ ä¼å¨æçuniqueçä¹°å°çå®è´éé¢çå°ä¹°å°çä¸è¥¿ï¼éé¢ç¶ææ¯å·²ç»åè´§ã<br />
+           ç¬¬â§ãæ¶è´§,å¨å®¶ç­å¿«éãæ¶è´§...åç­¾æ¶ã<br />
+           ç¬¬â¨ãççä¸è¥¿æ¯ä¸æ¯åææè¯´çç¬¦åï¼æ»¡æçè¯å°±å»ç½ä¸ç¡®è®¤æ¶è´§åä»æ¬¾ã<br />
+           ç¬¬â©ãæåï¼åä¸å«å¿äºç»ææçå¥½è¯ãåæ¶ä½ ä¹ä¼å¾å°ä¸ä¸ªä¹°å®¶å¥½è¯ï¼å¯ä»¥ç´¯è®¡çï¼æ¯å«äººè¡¡éä½ ä¿¡èªåº¦çæ åå¦<br />
+           æåãå¦æä¸è¥¿æé®é¢æä¸ç¬¦åï¼è·ææçæåºéæ¬¾ãå¦æä»èµå¸ï¼å°±è·æ¯ä»å®ä¸¾æ¥ãæ¯ä»å®ä¼åçå¤çï¼æé±è¿ç»ä½ ã</div>
+       </li>
+       <li>
+         <div></div>
+         <div><strong>uniqueè´­ç©æµç¨å¾</strong><br />
+           1ãç»å½www.unique.comï¼éæ©æ¨è¦è´­ä¹°çååï¼éä¸­åç¹&ldquo;ç«å³è´­ä¹°&rdquo;ä¹°ä¸æ¨éä¸­çååï¼2ãæ­£ç¡®å¡«åæ¨çæ¶è´§å°åãæ¶è´§äººãèç³»çµè¯ï¼ä»¥æ¹ä¾¿åå®¶ä¸ºæ¨åè´§åå¿«éå¬å¸èç³»æ¶è´§äººï¼å¡«åæ¨æéçè´­ä¹°æ°éï¼è¡¥åå®ææ¨çä¸ªäººåºæ¬ä¿¡æ¯ï¼ç¹&ldquo;ç¡®è®¤æ è¯¯ï¼è´­ä¹°&rdquo;ç»§ç»­ï¼<br />
+           3ãéæ©æ¯ä»å®è´¦æ·ä½é¢æ¯ä»ï¼è¾å¥æ¯ä»å®è´¦æ·æ¯ä»å¯ç ï¼ç¹&ldquo;ç¡®è®¤æ è¯¯ï¼ä»æ¬¾&rdquo;ï¼å¦æ¯ä»å®è´¦æ·æ ä½é¢å¯ä»¥éæ©ç½ä¸é¶è¡ãæ¯ä»å®å¡éãç½ç¹ä»æ¬¾æ¥å®ææ¯ä»ï¼<br />
+           4ãæ¯ä»å®è´¦æ·ä½é¢æ¯ä»ä»æ¬¾æåï¼ç¹&ldquo;ç¹æ­¤æ¥çæ¬ç¬äº¤æè¯¦æ&rdquo;ï¼<br />
+           5ã åå®¶åè´§åï¼ä¹°å®¶æ³¨ææ¥æ¶è´§ç©ï¼æ¶å°è´§ç©åï¼ç¹&ldquo;ç¡®è®¤æ¶è´§&rdquo;ä»æ¬¾ç»åå®¶ï¼<br />
+           6ãè¾å¥æ¯ä»å®è´¦æ·çæ¯ä»å¯ç ï¼ç¹&ldquo;åæä»æ¬¾&rdquo;ä»æ¬¾ç»åå®¶ï¼<br />
+           7ãè·³åºæç¤ºæ¡ç¡®è®¤æ¯å¦ççæ¶å°è´§ç©ï¼å¦æªæ¶å°è´§ç©è¯·åä¸ä¸è¦ç¹&ldquo;ç¡®å®&rdquo;æé®ï¼ä¸ç¶å¯è½ä¼é±è´§äºç©ºï¼æ¶å°è´§è¯·ç¹&ldquo;ç¡®å®&rdquo;ä»æ¬¾ç»åå®¶ï¼<br />
+           8ãæåä»æ¬¾ç»åå®¶ï¼<br />
+           9ãç»å¯¹æ¹è¯ä»·ï¼<br />
+           10ãè¯ä»·æåï¼<br />
+         </div>
+         <div>
+           <div><a href="http://jingyan.baidu.com/album/48b37f8d4d3fc81a65648846.html?picindex=1" target="_self"><img alt="æå¨çuniqueè´­ç©æµç¨ï¼æå­ç+å¾æçï¼" src="http://a.hiphotos.baidu.com/exp/w=500/sign=4949f8587bec54e741ec1a1e89399bfd/d009b3de9c82d158a4c92cd7800a19d8bc3e4208.jpg" /></a></div>
+           <div><a href="http://jingyan.baidu.com/album/48b37f8d4d3fc81a65648846.html?picindex=2" target="_self"><img alt="æå¨çuniqueè´­ç©æµç¨ï¼æå­ç+å¾æçï¼" src="http://d.hiphotos.baidu.com/exp/w=500/sign=36414c81912397ddd67998046983b216/ae51f3deb48f8c54c797b0493a292df5e0fe7f0b.jpg" /></a></div>
+           <div><a href="http://jingyan.baidu.com/album/48b37f8d4d3fc81a65648846.html?picindex=3" target="_self"><img alt="æå¨çuniqueè´­ç©æµç¨ï¼æå­ç+å¾æçï¼" src="http://f.hiphotos.baidu.com/exp/w=500/sign=6cd08bb976094b36db921bed93cd7c00/bd315c6034a85edfd0cc8b4549540923dd547517.jpg" /></a></div>
+           <div><a href="http://jingyan.baidu.com/album/48b37f8d4d3fc81a65648846.html?picindex=4" target="_self"><img alt="æå¨çuniqueè´­ç©æµç¨ï¼æå­ç+å¾æçï¼" src="http://e.hiphotos.baidu.com/exp/w=500/sign=85a39d02564e9258a63486eeac83d1d1/c9fcc3cec3fdfc031ec596ded43f8794a4c22612.jpg" /></a></div>
+           <div><a href="http://jingyan.baidu.com/album/48b37f8d4d3fc81a65648846.html?picindex=5" target="_self"><img alt="æå¨çuniqueè´­ç©æµç¨ï¼æå­ç+å¾æçï¼" src="http://e.hiphotos.baidu.com/exp/w=500/sign=507171fbcbef76093c0b999f1edca301/9825bc315c6034a8025acde7cb1349540923761f.jpg" /></a></div>
+           <div><a href="http://jingyan.baidu.com/album/48b37f8d4d3fc81a65648846.html?picindex=6" target="_self"><img alt="æå¨çuniqueè´­ç©æµç¨ï¼æå­ç+å¾æçï¼" src="http://a.hiphotos.baidu.com/exp/w=500/sign=720fa906352ac65c67056673cbf3b21d/4ec2d5628535e5ddaf99d0b976c6a7efce1b621a.jpg" /></a></div>
+           <div><a href="http://jingyan.baidu.com/album/48b37f8d4d3fc81a65648846.html?picindex=7" target="_self"><img alt="æå¨çuniqueè´­ç©æµç¨ï¼æå­ç+å¾æçï¼" src="http://a.hiphotos.baidu.com/exp/w=500/sign=cef19ae24aed2e73fce9862cb700a16d/54fbb2fb43166d22b7c160f2462309f79052d226.jpg" /></a></div>
+           <div><a href="http://jingyan.baidu.com/album/48b37f8d4d3fc81a65648846.html?picindex=8" target="_self"><img alt="æå¨çuniqueè´­ç©æµç¨ï¼æå­ç+å¾æçï¼" src="http://e.hiphotos.baidu.com/exp/w=500/sign=06f5425e7bf40ad115e4c7e3672d1151/0d338744ebf81a4c5d8199afd72a6059252da620.jpg" /></a></div>
+           <div><a href="http://jingyan.baidu.com/album/48b37f8d4d3fc81a65648846.html?picindex=9" target="_self"><img alt="æå¨çuniqueè´­ç©æµç¨ï¼æå­ç+å¾æçï¼" src="http://a.hiphotos.baidu.com/exp/w=500/sign=f5a419d4b2b7d0a27bc9049dfbee760d/f11f3a292df5e0fec1b5fc675c6034a85edf7222.jpg" /></a></div>
+           <div><a href="http://jingyan.baidu.com/album/48b37f8d4d3fc81a65648846.html?picindex=10" target="_self"><img alt="æå¨çuniqueè´­ç©æµç¨ï¼æå­ç+å¾æçï¼" src="http://c.hiphotos.baidu.com/exp/w=500/sign=9cbc475e28381f309e198da999004c67/730e0cf3d7ca7bcb08d5b249be096b63f624a82d.jpg" /></a></div>
+         </div>
+       </li>
+     </ol>
+     <br />
+   </div>
+   <!--helpPar/-->
+  </div><!--helpRight/-->
+  <div class="clears"></div>
+ </div><!--helpBox/-->
+ <div class="footBox">
+  <div class="footers">
+   <div class="footersLeft">
+    <a href="index.html"><img src="images/ftlogo.jpg" width="240" height="64" /></a>
+    <h3 class="ftphone">400 000 0000 </h3>
+    <div class="ftKe">
+     å®¢æ 7x24å°æ¶(å¨å¹´æ ä¼)<br />
+     <span>å®¢æé®ç®±ï¼kefu@webqin.net </span>
+    </div><!--ftKe/-->
+   </div><!--footersLeft/-->
+   <div class="footersRight">
+    <ul>
+     <li class="ftTitle">æ°ææå</li>
+     <li><a href="#">è´­ç©æµç¨</a></li>
+     <li><a href="#">ä¼åè®¡åååå</a></li>
+     <li><a href="#">ä¼æ å¸è§å</a></li>
+     <li><a href="#">èç³»å®¢æ</a></li>
+     <li><a href="#">å¸¸è§é®é¢</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ä»æ¬¾æ¹å¼</li>
+     <li><a href="#">å¨çº¿æ¯ä»</a></li>
+     <li><a href="#">ç¤¼åå¡æ¯ä»</a></li>
+     <li><a href="#">è´§å°ä»æ¬¾</a></li>
+     <li><a href="#">é¶è¡ä»æ¬¾</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ééæå¡</li>
+     <li><a href="#">ééæ¶æåè¿è´¹</a></li>
+     <li><a href="#">è¶æ¶èµä»</a></li>
+     <li><a href="#">éªè´§ä¸ç­¾æ¶</a></li>
+     <li><a href="#">éè´§ä¿¡æ¯è·è¸ª</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">å®åæå¡</li>
+     <li><a href="#">éæ¢è´§æ¿ç­</a></li>
+     <li><a href="#">éæ¢è´§åºå</a></li>
+     <li><a href="#">éæ¬¾æ¶é</a></li>
+     <li><a href="#">åè¡èµä»</a></li>
+     <li><a href="#">åç¥¨è¯´æ</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ç¹è²æå¡</li>
+     <li><a href="#">ç¤¼åå¡</a></li>
+     <li><a href="#">äº§åè¯ç¨</a></li>
+     <li><a href="#">è±ç²ä¸­å¿</a></li>
+     <li><a href="#">å¿«éè´­ç©</a></li>
+     <li><a href="#">æ¨èå¥½å</a></li>
+    </ul>
+    
+    <div class="clears"></div>
+   </div><!--footersRight/-->
+   <div class="clears"></div>
+  </div><!--footers/-->
+ </div><!--footBox/-->
+ <div class="footer" style="text-align:left;">
+  <a href="#">å³äºæä»¬</a>
+  <a href="#">åæé¾æ¥</a>
+  <a href="#">çæå£°æ</a>
+  <a href="#">ç½ç«å°å¾</a>
+  <br />
+  <span>&copy; 2014 Unqezi ä½¿ç¨åå¿è¯» æ²ªICPå¤ 12007626å·-1</span>
+ </div><!--footer/-->
+</body>
+</html>

@@ -1,0 +1,276 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>unique</title>
+<link type="text/css" href="css/css.css" rel="stylesheet" />
+<script type="text/javascript" src="js/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+
+</head>
+
+<body>
+ <div class="hrader" id="header">
+  <div class="top">
+   <a href="login.html" style="color:#C94E13;">è¯·ç»å½</a> 
+   <a href="reg.html">æ³¨å</a>
+   <ul class="topNav">
+     <li><a href="order.html">æçè®¢å </a></li>
+    <li class="gouwuche"><a href="car.html">è´­ç©è½¦</a> <strong style="color:#C94E13;">3</strong></li>
+    <li class="shoucangjia"><a href="shoucang.html">æ¶èå¤¹</a></li>
+    <li class="kefus"><a href="#">èç³»å®¢æ</a></li>
+    <li><a href="#" class="lan">ä¸­æ</a></li>
+    <li><a href="#" class="lan">English</a></li>
+    <div class="clears"></div>
+   </ul><!--topNav/-->
+  </div><!--top/-->
+ </div><!--hrader/-->
+ <div class="mid">
+  <h1 class="logo" style="text-align:left;">
+  <a href="index.html"><img src="images/logo.png" width="304" height="74" /></a>
+  </h1>
+  <form action="#" method="get" class="subBox">
+   <div class="subBox2">
+    <input type="text" class="subText" />
+    <input type="image" src="images/sub.jpg" width="95" height="32" class="subImg" />
+    <div class="hotci">
+    <a href="#">é·æ´¾å¤§ç¥</a>
+    <a href="#">ä¸æs5</a>
+    <a href="#">è¯ºåºäº1020</a>
+    <a href="#">Iphone 6</a>
+    <a href="#">htc one</a>
+   </div><!--hotci/-->
+   </div><!--subBox2/-->
+  </form><!--subBox/-->
+  <div class="ding-gou">
+   <div class="ding">
+    <a href="order.html"><img src="images/dingdan.jpg" width="106" height="32" /></a>
+   </div><!--ding/-->
+   <div class="gou">
+    <a href="car.html"><img src="images/gouwuche.jpg" width="126" height="32" /></a>
+   </div><!--gou/-->
+   <div class="clears"></div>
+  </div><!--ding-gou/-->
+ </div><!--mid-->
+ <div class="navBox navBg1">
+  <ul class="nav">
+   <li><a href="index.html">é¦é¡µ</a></li>
+   <li><a href="buy.html">ä¹°å®¶</a></li>
+   <li><a href="sell.html">åå®¶</a></li>
+   <li><a href="vip.html">ä¼åä¸­å¿</a></li>
+   <li><a href="xuanshang.html">æ¬èµæ¦</a></li>
+   <li><a href="luntan.html" class="luntan">è®ºå</a></li>
+   <li><a href="help.html">å¸®å©</a></li>
+   <div class="clears"></div>
+  </ul><!--nav/-->
+ </div><!--navBox/-->
+ <div style="background:#eee;">
+ <div class="dingImg"><img src="images/ding.jpg" width="1599" height="149" /></div>
+ <div class="dingBOx">
+  <h3 class="dingTitle">ææºå®å¶ <span>DIY</span> <strong class="shangchuan">ä¸ä¼ </strong></h3>
+  <div class="dingLeft">
+   <dl>
+    <dt class="d1">&nbsp;</dt>
+    <dd>
+     <h4>é»è®¤éç½®</h4>
+     <span>6399äººéæ©</span>
+    </dd>
+    <div class="clears"></div>
+   </dl>
+   <dl>
+    <dt class="d2">&nbsp;</dt>
+    <dd>
+     <h4>æ¸¸æé¸ä¸»</h4>
+     <span>6399äººéæ©</span>
+    </dd>
+    <div class="clears"></div>
+   </dl>
+   <dl>
+    <dt class="d3">&nbsp;</dt>
+    <dd>
+     <h4>èªæç¥å¨</h4>
+     <span>6399äººéæ©</span>
+    </dd>
+    <div class="clears"></div>
+   </dl>
+   <dl>
+    <dt class="d4">&nbsp;</dt>
+    <dd>
+     <h4>å½±é³å¨è½</h4>
+     <span>6399äººéæ©</span>
+    </dd>
+    <div class="clears"></div>
+   </dl>
+  </div><!--dingLeft/-->
+  <div class="dingMid">
+   <ul class="zheng">
+    <li><img src="images/zheng1.jpg" width="242" height="480" /></li>
+    <li><img src="images/zheng2.jpg" width="242" height="480" /></li>
+   </ul><!--zheng/-->
+   <div class="bei">
+    <!--<ul class="beiTop">
+     <li><img src="images/beiTop1.jpg" width="233"  height="58" /></li>
+     <li><img src="images/beiTop2.jpg" width="233"  height="58" /></li>
+     <li><img src="images/beiTop3.jpg" width="233"  height="58" /></li>
+    </ul>beiTop/-->
+    <!--<ul class="beiMid">
+     <li><img src="images/beiMid1.jpg" width="233" height="358" /></li>
+     <li><img src="images/beiMid4.jpg" width="233" height="358" /></li>
+     <li><img src="images/beiMid2.jpg" width="233" height="358" /></li>
+     <li><img src="images/beiMid3.jpg" width="233" height="358" /></li> 
+    </ul>beiMid/-->
+    <!--<ul class="beiDown">
+     <li><img src="images/beiDown1.jpg" width="233" height="57" /></li>
+     <li><img src="images/beiDown2.jpg" width="233" height="57" /></li>
+     <li><img src="images/beiDown3.jpg" width="233" height="57" /></li>
+    </ul>beiMid/-->
+    <ul class="zhengzheng">
+     <li><img src="images/zheng1.jpg" width="242" height="480" /></li>
+     <li><img src="images/zheng2.jpg" width="242" height="480" /></li>
+    </ul><!--zheng/-->
+   </div><!--bei/-->
+   <div class="clears"></div>
+   <ul class="xingneng">
+    <li class="xn1">&nbsp;</li>
+    <li class="xn2">&nbsp;</li>
+    <li class="xn3">&nbsp;</li>
+    <li class="xn4">&nbsp;</li>
+    <li class="xn5">&nbsp;</li>
+   </ul><!--xingneng/-->
+   <ul class="xingneng2">
+    <li class="xn21">åæ ¸1.5GHz</li>
+    <li class="xn22">1GB + 16GB</li>
+    <li class="xn23">800ä¸åç´ </li>
+    <li class="xn24">5.0è±å¯¸ FHD</li>
+    <li class="xn25"></li>
+   </ul><!--xingneng2/-->
+  </div><!--dingMid/-->
+  <div class="dingRight">
+   <h3>å¤è§</h3>
+   <h4>æºèº«æ­£é¢(å±å¹+è¾¹æ¡)</h4>
+   <ul class="jisy drZheng">
+    <li class="cffffff">&nbsp;</li>
+    <li class="c000000">&nbsp;</li>
+   </ul><!--drZheng/-->
+   <h4>æºèº«èé¢</h4>
+   <ul class="jisy drZhong">
+    <li class="c000000">&nbsp;</li>
+    <li class="cb7b7b7">&nbsp;</li>
+   </ul><!--drZheng/-->
+   <!--<h4>æºèº«èé¢ä¸ä¸æ®µ</h4>
+   <ul class="jisy drSx">
+    <li class="c000000">&nbsp;</li>
+    <li class="cffffff">&nbsp;</li>
+    <li class="cc5a6ba">&nbsp;</li>
+    <li class="c64baaf">&nbsp;</li>
+    <li class="cc6e340">&nbsp;</li>
+    <li class="cc6e340">&nbsp;</li>
+    <li class="cd05708">&nbsp;</li>
+    <li class="cdd4545">&nbsp;</li>
+    <li class="cd5c86d">&nbsp;</li>
+    <li class="c23d3a6">&nbsp;</li>
+    <li class="cff1372">&nbsp;</li>
+   </ul>drZheng/-->
+   <div class="jiagesss">
+    ï¿¥ <strong>2499</strong>
+    <a href="#">ç¡®è®¤éç½®</a>
+   </div><!--jiagesss/-->
+  </div><!--dingRight/-->
+  <div class="clears"></div>
+ </div><!--dingBOx/-->
+ </div>
+ <div class="footBox">
+  <div class="footers">
+   <div class="footersLeft">
+    <a href="index.html"><img src="images/ftlogo.jpg" width="240" height="64" /></a>
+    <h3 class="ftphone">400 000 0000 </h3>
+    <div class="ftKe">
+     å®¢æ 7x24å°æ¶(å¨å¹´æ ä¼)<br />
+     <span>å®¢æé®ç®±ï¼kefu@webqin.net </span>
+    </div><!--ftKe/-->
+   </div><!--footersLeft/-->
+   <div class="footersRight">
+    <ul>
+     <li class="ftTitle">æ°ææå</li>
+     <li><a href="#">è´­ç©æµç¨</a></li>
+     <li><a href="#">ä¼åè®¡åååå</a></li>
+     <li><a href="#">ä¼æ å¸è§å</a></li>
+     <li><a href="#">èç³»å®¢æ</a></li>
+     <li><a href="#">å¸¸è§é®é¢</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ä»æ¬¾æ¹å¼</li>
+     <li><a href="#">å¨çº¿æ¯ä»</a></li>
+     <li><a href="#">ç¤¼åå¡æ¯ä»</a></li>
+     <li><a href="#">è´§å°ä»æ¬¾</a></li>
+     <li><a href="#">é¶è¡ä»æ¬¾</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ééæå¡</li>
+     <li><a href="#">ééæ¶æåè¿è´¹</a></li>
+     <li><a href="#">è¶æ¶èµä»</a></li>
+     <li><a href="#">éªè´§ä¸ç­¾æ¶</a></li>
+     <li><a href="#">éè´§ä¿¡æ¯è·è¸ª</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">å®åæå¡</li>
+     <li><a href="#">éæ¢è´§æ¿ç­</a></li>
+     <li><a href="#">éæ¢è´§åºå</a></li>
+     <li><a href="#">éæ¬¾æ¶é</a></li>
+     <li><a href="#">åè¡èµä»</a></li>
+     <li><a href="#">åç¥¨è¯´æ</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ç¹è²æå¡</li>
+     <li><a href="#">ç¤¼åå¡</a></li>
+     <li><a href="#">äº§åè¯ç¨</a></li>
+     <li><a href="#">è±ç²ä¸­å¿</a></li>
+     <li><a href="#">å¿«éè´­ç©</a></li>
+     <li><a href="#">æ¨èå¥½å</a></li>
+    </ul>
+    
+    <div class="clears"></div>
+   </div><!--footersRight/-->
+   <div class="clears"></div>
+  </div><!--footers/-->
+ </div><!--footBox/-->
+ <div class="footer" style="text-align:left;">
+  <a href="#">å³äºæä»¬</a>
+  <a href="#">åæé¾æ¥</a>
+  <a href="#">çæå£°æ</a>
+  <a href="#">ç½ç«å°å¾</a>
+  <br />
+  <span>&copy; 2014 Unqezi ä½¿ç¨åå¿è¯» æ²ªICPå¤ 12007626å·-1</span>
+ </div><!--footer/-->
+ <div class="shangchuanBox">
+  <h1><span class="close"><img src="images/close.png" width="20" height="20" /></span></h1>
+  <form action="" method="post" enctype="multipart/form-data"> 
+   <div class="sList">
+    <label>æ é¢ï¼</label>
+    <input type="text" />
+   </div><!--sList/-->
+   <div class="sList">
+    <label>å¾çï¼</label>
+    <input type="file" name="file" /> 
+   </div><!--sList/-->
+   <div class="sList2">
+    <label>åå®¹ï¼</label>
+    <textarea>
+     åå®¹åå®¹åå®¹
+    </textarea>
+   </div><!--sList/-->
+   <div class="queren">
+    <input type="button" value=" ç¡® è®¤ ä¸ ä¼  ">
+   </div><!--queren/-->
+  </form>
+ </div><!--shangchuanBox/-->
+ <div class="bg100">&nbsp;</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+package cn.easybuy.entity;
+
+public class ProListfenji {
+    //手机品牌
+	private String name;
+	//type
+	private int type;
+	//父级id
+	private int parentId;
+	private int id;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getType() {
+		return type;
+	}
+	public void setType(int type) {
+		this.type = type;
+	}
+	public int getParentId() {
+		return parentId;
+	}
+	public void setParentId(int parentId) {
+		this.parentId = parentId;
+	}
+}

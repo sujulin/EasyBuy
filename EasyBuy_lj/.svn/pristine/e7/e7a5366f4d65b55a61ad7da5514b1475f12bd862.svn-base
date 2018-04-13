@@ -1,0 +1,37 @@
+package cn.easybuy.dao.impl;
+
+import java.sql.ResultSet;
+
+import cn.easybuy.dao.BaseDao;
+import cn.easybuy.dao.PhoneInfoDao;
+import cn.easybuy.entity.Phoneinfo;
+
+
+public class PhoneInfoDaoimpl extends BaseDao implements PhoneInfoDao{
+
+	
+	public boolean Select(Phoneinfo info) throws Exception {
+		boolean flag=false;
+		String sql="select * from easybuy_lj_phone_info where pid = ?";
+		Object[] obj={info.getDescription(),info.getCount(),info.getName(),info.getNumber(),info.getPrice(),info.getFilename()};
+		ResultSet rs=executeQuery(sql,obj);
+		if(rs.next()){
+			int count=rs.getInt("count");
+			if(count>0){
+				flag=true;
+			}
+		}
+		return flag;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

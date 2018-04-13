@@ -1,0 +1,140 @@
+package cn.easybuy.dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import javax.naming.Context;
+import javax.naming.InitialContext;
+import javax.sql.DataSource;
+
+/*通用的访问数据库的方法
+ * */
+public class BaseDao {
+	// 驱动字符串
+	private final static String driver = "com.mysql.jdbc.Driver";
+	// 连接字符串
+	private final static String url = "jdbc:mysql://localhost:3306/easybuy_lj";
+	private final static String username = "root";
+	private final static String pwd = "";
+
+	protected static Connection con = null;
+	PreparedStatement ps = null;
+	ResultSet rs = null;
+
+	//使用数据源获取连接对象
+	public Connection getConnection2() {
+		try {
+			Class.forName(driver);
+			if (con==null||con.isClosed()) {
+				Context ctx=new InitialContext();
+				DataSource ds=(DataSource)ctx.lookup("java:comp/env/jdbc/easybuy_lj");
+				con=ds.getConnection();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return con;
+	}
+	// 01.写一个返回连接对象的方法
+	public static Connection getConnection() {
+		try {
+			Class.forName(driver);
+			if (con==null||con.isClosed()) {
+				con = DriverManager.getConnection(url, username, pwd);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return con;
+	}
+	// 02.写一个关闭三个对象的方法
+	public void closeResource(){
+		try {
+			if(rs!=null){
+				rs.close();
+			}
+			if (ps!=null) {
+				ps.close();
+			}if (con!=null) {
+				con.close();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	// 03.写一个从数据库检索数据的方法
+	public ResultSet executeQuery(String sql,Object... paras){
+		try {
+			//01.获取连接对象
+			con=getConnection();
+			//02.发送SQL
+			ps=con.prepareStatement(sql);
+			//03.对参数赋值
+			if (paras.length>0) {
+				for (int i = 0; i < paras.length; i++) {
+					ps.setObject(i+1,paras[i]);
+				}
+			}
+			//04.真正的执行了
+			rs=ps.executeQuery();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return rs;
+	}
+	// 04.写一个执行增删改操作的方法
+	public int executeUpdate(String sql,Object... paras){
+		int count=0;
+		try {
+			//01.获取连接
+			   con=getConnection();
+			   //02.创建命令对象
+			   ps=con.prepareStatement(sql);
+			   //03.给参数赋值
+			   if (paras.length>0) {
+				  for (int i = 0; i < paras.length; i++) {
+					 ps.setObject(i+1,paras[i]);
+				  }
+			   }
+			   //04.该执行了呀
+			   count=ps.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return count;
+	}
+	
+/*	//单例模式返回数据库连接对象
+		public static Connection getConnection() throws Exception
+		{
+			if(conn==null)
+			{
+				conn = DriverManager.getConnection(url, username, password);
+				return conn;
+			}
+			return conn;
+		}*/
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

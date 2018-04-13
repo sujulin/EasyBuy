@@ -1,0 +1,64 @@
+package cn.easybuy.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.List;
+
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cn.easybuy.entity.ProListfenji;
+import cn.easybuy.entity.Prolist;
+import cn.easybuy.service.ProListfenjiService;
+import cn.easybuy.service.ProlistinfoService;
+import cn.easybuy.service.impl.ProListfenjiServiceImpl;
+import cn.easybuy.service.impl.prolistinfoServiceImpl;
+
+public class ProListfenjiServlet extends HttpServlet {
+
+	
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		doPost(request,response);
+	}
+
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+            ProListfenjiService pro=new ProListfenjiServiceImpl();
+            System.out.println("22222");
+            
+            try {
+            	List<ProListfenji>list2=null;
+				List<ProListfenji>list=pro.findAll();
+				request.setAttribute("list", list);
+				ProlistinfoService service=new prolistinfoServiceImpl();
+	    		List<Prolist> list4=service.findAll();
+	            request.setAttribute("list4", list4);
+				
+				for(ProListfenji item:list){
+					list2=pro.findPart(697);
+					request.setAttribute("lists", list2);
+					
+					
+				}
+				
+				request.getRequestDispatcher("/prolist.jsp").forward(request, response);
+			} catch (Exception e) {
+				
+				e.printStackTrace();
+			}
+            
+            
+           
+    		
+    	  
+		
+	}
+
+}

@@ -1,0 +1,84 @@
+package cn.easybuy.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+
+import cn.easybuy.entity.Phoneinfo;
+import cn.easybuy.entity.Prolist;
+import cn.easybuy.service.PhoneInfoService;
+import cn.easybuy.service.impl.PhoneInfoServiceimpl;
+import cn.easybuy.service.impl.prolistinfoServiceImpl;
+
+public class PhoneInfoServlet extends HttpServlet {
+
+	
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+   doPost(request,response);
+	}
+
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+/*
+		 String detail=request.getParameter("detail");
+		    int bookid=Integer.parseInt(request.getParameter("bookid"));
+		    BookInfoDomain book=new BookInfoDomainImpl();
+		    Map<String, BookInfoBean>map1= book.queryDetail(bookid);
+		    Map map=new HashMap();
+		    map.put("bookid", ""+bookid);
+		    List<CommentBean> list1= new CommentDomainImpl().queryByCondition(map);
+		    request.setAttribute("list1", list1);
+			request.setAttribute("map1", map1);
+			if(detail==null){
+				return "bookinfo.jsp";
+			}
+			else{
+				
+				
+			}return "bookdetail.jsp";
+				
+		
+		*/
+		System.out.println("hao");
+		
+		
+		String info = request.getParameter("info");
+		int pid = Integer.parseInt(request.getParameter("pid"));
+		PhoneInfoService phone = new PhoneInfoServiceimpl();
+		Map<String,Phoneinfo> map1 = phone.Select(pid);
+		Map map = new HashMap();
+		map.put("pid",""+pid);
+		
+			List<Prolist> list1;
+			try {
+				list1 = new prolistinfoServiceImpl().findAll();
+				request.setAttribute("list1", list1);
+				request.setAttribute("map1", map1);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	
+		 
+		
+		
+		
+		
+	
+		
+		
+	
+	}
+
+}

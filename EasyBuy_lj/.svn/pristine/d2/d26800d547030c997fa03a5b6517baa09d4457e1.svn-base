@@ -1,0 +1,114 @@
+package cn.easybuy.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+
+import cn.easybuy.dao.RegisterinfoDao;
+import cn.easybuy.dao.UserinfoDao;
+import cn.easybuy.dao.impl.RegisterinfoDaoimpl;
+import cn.easybuy.dao.impl.UserinfoDaoimpl;
+import cn.easybuy.entity.Userinfo;
+import cn.easybuy.service.UserinfoService;
+import cn.easybuy.service.impl.UserinfoServiceImpl;
+public class UserinfoServlet extends HttpServlet {
+
+	/**
+	 * The doGet method of the servlet. <br>
+	 *
+	 * This method is called when a form has its tag value method equals to get.
+	 * 
+	 * @param request the request send by the client to the server
+	 * @param response the response send by the server to the client
+	 * @throws ServletException if an error occurred
+	 * @throws IOException if an error occurred
+	 */
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		doPost(request,response);
+		
+	}
+
+	/**
+	 * The doPost method of the servlet. <br>
+	 *
+	 * This method is called when a form has its tag value method equals to post.
+	 * 
+	 * @param request the request send by the client to the server
+	 * @param response the response send by the server to the client
+	 * @throws ServletException if an error occurred
+	 * @throws IOException if an error occurred
+	 */
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+      System.out.println("2124455");
+		String action = request.getParameter("action");
+		System.out.println(action);
+		if(action.equals("logout")){
+			
+			
+			request.getSession().removeAttribute("loginName");
+			request.getRequestDispatcher("/servlet/UserinfoServlet?action=null").forward(request, response);
+		}else if(action.equals("login")){
+		//1.�������
+		request.setCharacterEncoding("utf-8");
+		//2.����service��Ķ���
+		UserinfoService service=new UserinfoServiceImpl();
+		//3.����service����
+		String temp=request.getParameter("loginName");
+		System.out.println(temp);
+		
+		if(temp!=null&&temp!=""){
+		String loginName=request.getParameter("loginName");
+		System.out.println(loginName);
+		String password=request.getParameter("password");
+		System.out.println(password);
+		Userinfo info=new Userinfo();
+		info.setLoginName(loginName);
+        
+        info.setPassword(password);
+       
+		try {
+			boolean flag = service.islogin(info);
+			//4.��ݷ�������ֵ���ж�        ת������  �ض����Ŀ��ҳ��
+			if(flag){
+				//��¼�ɹ�
+				System.out.println("1");
+				request.getRequestDispatcher("/servlet/UserinfoServlet?action=LoadUname").forward(request, response);
+				//servlet/UserinfoServlet?action=back
+			}else {
+				//��¼ʧ��
+				//ת�����㻹���¼�û���
+				System.out.println("2");
+				request.getRequestDispatcher("/login.jsp").forward(request, response);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+			
+	}
+
+}else if ("LoadUname".equals(action)){
+	
+	String loginName = request.getParameter("loginName");
+	System.out.println(loginName);
+	request.setAttribute("loginName", loginName);
+	request.getRequestDispatcher("/index.jsp").forward(request, response);
+	
+	
+	
+	
+	
+}
+	}
+
+}

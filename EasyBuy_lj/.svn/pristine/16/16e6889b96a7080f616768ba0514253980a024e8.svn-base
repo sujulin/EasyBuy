@@ -1,0 +1,25 @@
+package cn.easybuy.service.impl;
+
+import cn.easybuy.dao.BaseDao;
+import cn.easybuy.dao.PhoneInfoDao;
+import cn.easybuy.dao.impl.PhoneInfoDaoimpl;
+import cn.easybuy.entity.Phoneinfo;
+import cn.easybuy.service.PhoneInfoService;
+
+public class PhoneInfoServiceimpl extends BaseDao implements PhoneInfoService{
+	 PhoneInfoDao  dao=new PhoneInfoDaoimpl();
+	/*public boolean Select(Phoneinfo info) throws Exception {
+		
+	
+	}*/
+
+	public boolean Select(Phoneinfo info) throws Exception {
+		// TODO Auto-generated method stub
+		return dao.Select(info);
+	}
+	
+	
+	
+	
+
+}

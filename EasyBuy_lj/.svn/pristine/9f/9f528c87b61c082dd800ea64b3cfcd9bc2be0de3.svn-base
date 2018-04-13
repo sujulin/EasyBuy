@@ -1,0 +1,15 @@
+package cn.easybuy.dao;
+
+import java.util.ArrayList;
+
+import cn.easybuy.entity.Phoneinfo;
+
+public interface PhoneInfoDao {
+
+	
+	public Phoneinfo getItemsById(int pid);
+	public ArrayList<Phoneinfo> getAllItems();
+	public ArrayList<Phoneinfo> getViewList(String list);
+	
+	
+}

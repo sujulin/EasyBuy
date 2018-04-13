@@ -1,0 +1,29 @@
+package cn.easybuy.service.impl;
+
+import java.util.Map;
+
+import cn.easybuy.dao.BaseDao;
+import cn.easybuy.dao.PhoneInfoDao;
+import cn.easybuy.dao.impl.PhoneInfoDaoimpl;
+import cn.easybuy.entity.Phoneinfo;
+import cn.easybuy.service.PhoneInfoService;
+
+public class PhoneInfoServiceimpl extends BaseDao implements PhoneInfoService{
+	 PhoneInfoDao  dao=new PhoneInfoDaoimpl();
+	/*public boolean Select(Phoneinfo info) throws Exception {
+		
+	
+	}*/
+
+	
+
+	public Map<String, Phoneinfo> Select(int pid) {
+		
+		return dao.Select(pid);
+	}
+	
+	
+	
+	
+
+}

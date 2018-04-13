@@ -1,0 +1,11 @@
+package cn.easybuy.service;
+
+import java.util.Map;
+
+
+
+import cn.easybuy.entity.Phoneinfo;
+
+public interface PhoneInfoService {
+	public Map<String,Phoneinfo> Select(int pid);
+}

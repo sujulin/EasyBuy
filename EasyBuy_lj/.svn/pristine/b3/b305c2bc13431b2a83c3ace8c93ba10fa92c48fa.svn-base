@@ -1,0 +1,98 @@
+package cn.easybuy.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import cn.easybuy.dao.RegisterinfoDao;
+import cn.easybuy.dao.impl.RegisterinfoDaoimpl;
+import cn.easybuy.entity.Userinfo;
+
+public class RegisterinfoServlet extends HttpServlet {
+
+	/**
+	 * The doGet method of the servlet. <br>
+	 *
+	 * This method is called when a form has its tag value method equals to get.
+	 * 
+	 * @param request the request send by the client to the server
+	 * @param response the response send by the server to the client
+	 * @throws ServletException if an error occurred
+	 * @throws IOException if an error occurred
+	 */
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		doPost(request,response);
+	}
+
+	/**
+	 * The doPost method of the servlet. <br>
+	 *
+	 * This method is called when a form has its tag value method equals to post.
+	 * 
+	 * @param request the request send by the client to the server
+	 * @param response the response send by the server to the client
+	 * @throws ServletException if an error occurred
+	 * @throws IOException if an error occurred
+	 */
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		String action=request.getParameter("action");
+		System.out.println(action);
+		Userinfo info=new Userinfo();
+		RegisterinfoDao dao=new RegisterinfoDaoimpl();
+		 if("regist".equals(action)){
+				//获取表单数据
+				//登录名  昵称，密码，邮箱，手机号
+				String loginName=request.getParameter("loginName");
+				
+				String password=request.getParameter("password");
+				String email=request.getParameter("email");
+				int mobile=Integer.parseInt(request.getParameter("mobile"));
+				System.out.println(mobile);
+				//与实体绑定
+				info.setLoginName(loginName);
+				
+				info.setPassword(password);
+				info.setEmail(email);
+				info.setMobile(mobile);
+				
+				
+				//调用添加的方法
+				try {
+
+					 String piccode=(String)request.getSession().getAttribute("piccode");
+					 String checkcode=request.getParameter("checkScode");
+					 checkcode=checkcode.toUpperCase();
+					
+					
+				    if(piccode.equals(checkcode)){ 
+					
+				    	boolean falg=dao.register(info);
+					//如果创建成功跳转到登陆页面
+					if(falg){
+						
+					    	request.getRequestDispatcher("/login.jsp").forward(request, response);
+						
+					    }
+						
+						//跳转到登陆页面
+						
+					}else{
+						//设置页面跳转失败信息
+						request.getRequestDispatcher("/reg.jsp").forward(request, response);
+						request.getSession().setAttribute("messagezhuce","注册失败了");
+						
+					}
+				} catch (Exception e) {				
+				}			
+			}
+		
+	}
+
+}

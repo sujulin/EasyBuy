@@ -1,0 +1,30 @@
+package cn.easybuy.dao.impl;
+
+import java.sql.ResultSet;
+import java.util.List;
+
+import org.junit.Test;
+
+import cn.easybuy.dao.BaseDao;
+import cn.easybuy.dao.ProListfenjiDao;
+import cn.easybuy.entity.ProListfenji;
+import cn.easybuy.util.MyTool;
+
+public class ProListfenjiDaoimpl extends BaseDao implements ProListfenjiDao {
+
+	public List<ProListfenji> findAll() throws Exception {
+	    String sql="SELECT * FROM easybuy_product_category WHERE TYPE=1";
+	    ResultSet rs=executeQuery(sql);
+	    List<ProListfenji>list= MyTool.tool(rs,ProListfenji.class);
+		return list;
+	}
+
+	public List<ProListfenji> findPart(int id) throws Exception {
+		 String sql="SELECT * FROM easybuy_product_category WHERE parentId=? ORDER BY id";
+		 Object[] paras = {id};
+		 ResultSet rs=executeQuery(sql,paras);
+		 List<ProListfenji>list= MyTool.tool(rs,ProListfenji.class);
+		 return list;
+	}
+
+}

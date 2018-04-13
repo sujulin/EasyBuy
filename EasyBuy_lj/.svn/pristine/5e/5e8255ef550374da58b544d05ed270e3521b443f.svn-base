@@ -1,0 +1,915 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>unique</title>
+<link type="text/css" href="css/css.css" rel="stylesheet" />
+<script type="text/javascript" src="js/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+
+</head>
+
+<body>
+ <div class="hrader" id="header">
+  <div class="top">
+   <a href="login.html" style="color:#C94E13;">è¯·ç»å½</a> 
+   <a href="reg.html">æ³¨å</a>
+   <ul class="topNav">
+     <li><a href="order.html">æçè®¢å </a></li>
+    <li class="gouwuche"><a href="car.html">è´­ç©è½¦</a> <strong style="color:#C94E13;">3</strong></li>
+    <li class="shoucangjia"><a href="shoucang.html">æ¶èå¤¹</a></li>
+    <li class="kefus"><a href="#">èç³»å®¢æ</a></li>
+    <li><a href="#" class="lan">ä¸­æ</a></li>
+    <li><a href="#" class="lan">English</a></li>
+    <div class="clears"></div>
+   </ul><!--topNav/-->
+  </div><!--top/-->
+ </div><!--hrader/-->
+ <div class="mid">
+  <h1 class="logo" style="text-align:left;">
+  <a href="index.html"><img src="images/logo.png" width="304" height="74" /></a>
+  </h1>
+  <form action="#" method="get" class="subBox">
+   <div class="subBox2">
+    <input type="text" class="subText" />
+    <input type="image" src="images/sub.jpg" width="95" height="32" class="subImg" />
+    <div class="hotci">
+    <a href="#">é·æ´¾å¤§ç¥</a>
+    <a href="#">ä¸æs5</a>
+    <a href="#">è¯ºåºäº1020</a>
+    <a href="#">Iphone 6</a>
+    <a href="#">htc one</a>
+   </div><!--hotci/-->
+   </div><!--subBox2/-->
+  </form><!--subBox/-->
+  <div class="ding-gou">
+   <div class="ding">
+    <a href="order.html"><img src="images/dingdan.jpg" width="106" height="32" /></a>
+   </div><!--ding/-->
+   <div class="gou">
+    <a href="car.html"><img src="images/gouwuche.jpg" width="126" height="32" /></a>
+   </div><!--gou/-->
+   <div class="clears"></div>
+  </div><!--ding-gou/-->
+ </div><!--mid-->
+ <div class="navBox navBg1">
+  <ul class="nav">
+   <li><a href="index.html">é¦é¡µ</a></li>
+   <li><a href="buy.html">ä¹°å®¶</a></li>
+   <li><a href="sell.html">åå®¶</a></li>
+   <li><a href="vip.html">ä¼åä¸­å¿</a></li>
+   <li><a href="xuanshang.html">æ¬èµæ¦</a></li>
+   <li><a href="luntan.html" class="luntan">è®ºå</a></li>
+   <li><a href="help.html">å¸®å©</a></li>
+   <div class="clears"></div>
+  </ul><!--nav/-->
+ </div><!--navBox/-->
+ <form action="#" method="get" class="proDingzhi">
+  <img src="images/dingzhi.jpg" width="972" height="167" />
+  <div class="bdsharebuttonbox">
+  <a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="åäº«å°QQç©ºé´"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="åäº«å°æ°æµªå¾®å"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="åäº«å°è¾è®¯å¾®å"></a><a href="#" class="bds_renren" data-cmd="renren" title="åäº«å°äººäººç½"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="åäº«å°å¾®ä¿¡"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+  <table class="proDSel">
+   <tr>
+    <th>
+     <h3>åç</h3>
+    </th>
+    <td>
+     <div class="proPosition">
+      <ul class="xuan">
+       <li><input type="checkbox" /><a href="#">ä¸æ/SAMSUNG</a></li>
+       <li><input type="checkbox" /><a href="#">å°ç±³/MI</a></li>
+       <li><input type="checkbox" /><a href="#">è¹æ/Apple</a></li>
+       <li><input type="checkbox" /><a href="#">åä¸º/HUAWEI</a></li>
+       <li><input type="checkbox" /><a href="#">HTC</a></li>
+       <li><input type="checkbox" /><a href="#">è¯ºåºäº/NOKIA</a></li>
+       <li><input type="checkbox" /><a href="#">é·æ´¾/Coolpad</a></li>
+       <li><input type="checkbox" /><a href="#">vivo</a></li>
+       <li><input type="checkbox" /><a href="#">èæ³/Lenovo</a></li>
+       <li><input type="checkbox" /><a href="#">OPPO</a></li>
+       <li><input type="checkbox" /><a href="#">ä¸­å´/ZTE</a></li>
+       <li><input type="checkbox" /><a href="#">ç´¢å°¼/SONY</a></li>
+       <li><input type="checkbox" /><a href="#">é­æ/MEIZU</a></li>
+       <li><input type="checkbox" /><a href="#">åªæ¯äº/nubia</a></li>
+       <li><input type="checkbox" /><a href="#">éç«/GIONEE</a></li>
+       <li><input type="checkbox" /><a href="#">åç¡/ASUS</a></li>
+       <li><input type="checkbox" /><a href="#">TCL</a></li>
+       <li><input type="checkbox" /><a href="#">é£å©æµ¦/PHILIPS</a></li>
+       <div class="clearfix"></div>
+      </ul><!--xuan/-->
+      <span class="duoxuan">
+       å¤é
+      </span><!--duoxuan/-->
+      <input type="image" src="images/queding.png" class="queen2" />
+      <div class="more-shou">
+       <span class="more">
+        æ´å¤ &gt;
+       </span>
+       <span class="shou">
+        æ¶èµ· &gt;
+       </span>
+      </div><!--more-shou/-->
+     </div>
+    </td>
+   </tr>
+   <tr>
+    <th>
+     <h3>å¤§å®¶é½å¨é</h3>
+    </th>
+    <td>
+     <div class="proPosition">
+      <ul class="xuan moreHeight">
+       <li><input type="checkbox" /><a href="#">å±å¹ä¸é</a></li>
+       <li><input type="checkbox" /><a href="#">çµæ± èç¨</a></li>
+       <li><input type="checkbox" /><a href="#">ç³»ç»æµç</a></li>
+       <li><input type="checkbox" /><a href="#">å¤è§éä¸½</a></li>
+       <li><input type="checkbox" /><a href="#">æ§è½å¥½</a></li>
+       <li><input type="checkbox" /><a href="#">éè¯è´¨éå¥½</a></li>
+       <li><input type="checkbox" /><a href="#">å¾è½»ä¾¿</a></li>
+       <li><input type="checkbox" /><a href="#">æ§ä»·æ¯å¾é«</a></li>
+       <li><input type="checkbox" /><a href="#">å¤è®¾ä¸é</a></li>
+       <li><input type="checkbox" /><a href="#">åè£ä¸éå¦</a></li>
+       <li><input type="checkbox" /><a href="#">åè£ä¸éå¦</a></li>
+       <div class="clearfix"></div>
+      </ul><!--xuan/-->
+      <span class="duoxuan">
+       å¤é
+      </span><!--duoxuan/-->
+      <input type="image" src="images/queding.png" class="queen2" />
+      <div class="more-shou">
+       <span class="more">
+        æ´å¤ &gt;
+       </span>
+       <span class="shou">
+        æ¶èµ· &gt;
+       </span>
+      </div><!--more-shou/-->
+     </div>
+    </td>
+   </tr>
+   <tr>
+    <th>
+     <h3>ä»·æ ¼</h3>
+    </th>
+    <td>
+     <div class="proPosition">
+      <ul class="xuan">
+       <li><a href="#">0-500å</a></li>
+       <li><a href="#">500-1000å</a></li>
+       <li><a href="#">1000-1500å</a></li>
+       <li><a href="#">1500-2000å</a></li>
+       <li><a href="#">2000-3000å</a></li>
+       <li><a href="#">3000åä»¥ä¸</a></li>
+       <div class="clearfix"></div>
+      </ul><!--xuan/-->
+      <div class="jiage">
+       <input type="text" />&nbsp;-&nbsp;
+       <input type="text" />&nbsp;
+       <input type="image" src="images/queding.png" class="queen" />
+      </div><!--jiage/-->
+     </div>
+    </td>
+   </tr>
+   <tr>
+    <th>
+     <h3>CPU</h3>
+    </th>
+    <td>
+     <div class="proPosition">
+      <ul class="xuan">
+       <li><input type="checkbox" /><a href="#">å«æ ¸</a></li>
+       <li><input type="checkbox" /><a href="#">åæ ¸</a></li>
+       <li><input type="checkbox" /><a href="#">åæ ¸</a></li>
+       <li><input type="checkbox" /><a href="#">åæ ¸</a></li>
+       <li><input type="checkbox" /><a href="#">å¶ä»</a></li>
+       <div class="clearfix"></div>
+      </ul><!--xuan/-->
+      <span class="duoxuan">
+       å¤é
+      </span><!--duoxuan/-->
+      <input type="image" src="images/queding.png" class="queen2" />
+     </div>
+    </td>
+   </tr>
+   <tr>
+    <th>
+     <h3>ç¹ç¹</h3>
+    </th>
+    <td>
+     <div class="proPosition">
+      <ul class="xuan moreHeight">
+       <li><input type="checkbox" /><a href="#">å¥³æ§ææº</a></li>
+       <li><input type="checkbox" /><a href="#">å¿ç«¥ææº</a></li>
+       <li><input type="checkbox" /><a href="#">å¿ç«¥ææº</a></li>
+       <li><input type="checkbox" /><a href="#">å¿ç«¥ææº</a></li>
+       <li><input type="checkbox" /><a href="#">3Gè§é¢éè¯</a></li>
+       <li><input type="checkbox" /><a href="#">é³ä¹ææº</a></li>
+       <li><input type="checkbox" /><a href="#">åå¡ææº</a></li>
+       <li><input type="checkbox" /><a href="#">æåè¾å¥</a></li>
+       <div class="clearfix"></div>
+      </ul><!--xuan/-->
+      <span class="duoxuan">
+       å¤é
+      </span><!--duoxuan/-->
+      <input type="image" src="images/queding.png" class="queen2" />
+      <div class="more-shou">
+       <span class="more">
+        æ´å¤ &gt;
+       </span>
+       <span class="shou">
+        æ¶èµ· &gt;
+       </span>
+      </div><!--more-shou/-->
+     </div>
+     </div>
+    </td>
+   </tr>
+   <tr>
+    <th>
+     <h3>é«çº§åè½</h3>
+    </th>
+    <td>
+     <div class="proPosition">
+      <ul class="xuan moreHeight">
+       <li><input type="checkbox" /><a href="#">åå¡åå¾</a></li>
+       <li><input type="checkbox" /><a href="#">é«æ¸è§é¢</a></li>
+       <li><input type="checkbox" /><a href="#">WIFI</a></li>
+       <li><input type="checkbox" /><a href="#">åç½®æåå¤´</a></li>
+       <li><input type="checkbox" /><a href="#">çµè§æ­æ¾</a></li>
+       <div class="clearfix"></div>
+      </ul><!--xuan/-->
+      <span class="duoxuan">
+       å¤é
+      </span><!--duoxuan/-->
+      <input type="image" src="images/queding.png" class="queen2" />
+     </div>
+    </td>
+   </tr>
+   <tr>
+    <td colspan="2">
+     <ul class="xuan2">
+      <li>
+       <a href="#">ç½ç»å¶å¼</a> 
+       <div class="chilXuan">
+        <div class="chilXBox">
+         <div><input type="checkbox" /><a href="#">éé¡¹1</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹2</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹3</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹4</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹5</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹6</a></div>
+         <div class="clears"></div>
+         <span class="duoxuan">
+           å¤é
+         </span><!--duoxuan/-->
+         <input type="image" src="images/queding.png" class="queen2" />
+        </div><!--chilXBox-->
+       </div><!--chilXuan/-->
+      </li>
+      <li>
+       <a href="#">æåå¤´åç´ </a> 
+       <div class="chilXuan">
+        <div class="chilXBox">
+         <div><input type="checkbox" /><a href="#">éé¡¹1</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹2</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹3</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹4</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹5</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹6</a></div>
+         <div class="clears"></div>
+         <span class="duoxuan">
+           å¤é
+         </span><!--duoxuan/-->
+         <input type="image" src="images/queding.png" class="queen2" />
+        </div><!--chilXBox-->
+       </div><!--chilXuan/-->
+      </li>
+      <li>
+       <a href="#">ä¸å¸æ¶é´</a> 
+       <div class="chilXuan">
+        <div class="chilXBox">
+         <div><input type="checkbox" /><a href="#">éé¡¹1</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹2</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹3</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹4</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹5</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹6</a></div>
+         <div class="clears"></div>
+         <span class="duoxuan">
+           å¤é
+         </span><!--duoxuan/-->
+         <input type="image" src="images/queding.png" class="queen2" />
+        </div><!--chilXBox-->
+       </div><!--chilXuan/-->
+      </li>
+      <li>
+       <a href="#">æ¾ç¤ºå±å°ºå¯¸</a> 
+       <div class="chilXuan">
+        <div class="chilXBox">
+         <div><input type="checkbox" /><a href="#">éé¡¹1</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹2</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹3</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹4</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹5</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹6</a></div>
+         <div class="clears"></div>
+         <span class="duoxuan">
+           å¤é
+         </span><!--duoxuan/-->
+         <input type="image" src="images/queding.png" class="queen2" />
+        </div><!--chilXBox-->
+       </div><!--chilXuan/-->
+      </li>
+      <li>
+       <a href="#">ææ§</a> 
+       <div class="chilXuan">
+        <div class="chilXBox">
+         <div><input type="checkbox" /><a href="#">éé¡¹1</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹2</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹3</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹4</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹5</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹6</a></div>
+         <div class="clears"></div>
+         <span class="duoxuan">
+           å¤é
+         </span><!--duoxuan/-->
+         <input type="image" src="images/queding.png" class="queen2" />
+        </div><!--chilXBox-->
+       </div><!--chilXuan/-->
+      </li>
+      <li>
+       <a href="#">å¤è§</a> 
+       <div class="chilXuan">
+        <div class="chilXBox">
+         <div><input type="checkbox" /><a href="#">éé¡¹1</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹2</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹3</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹4</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹5</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹6</a></div>
+         <div class="clears"></div>
+         <span class="duoxuan">
+           å¤é
+         </span><!--duoxuan/-->
+         <input type="image" src="images/queding.png" class="queen2" />
+        </div><!--chilXBox-->
+       </div><!--chilXuan/-->
+      </li>
+      <li>
+       <a href="#">ç³»ç»</a> 
+       <div class="chilXuan">
+        <div class="chilXBox">
+         <div><input type="checkbox" /><a href="#">éé¡¹1</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹2</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹3</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹4</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹5</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹6</a></div>
+         <div class="clears"></div>
+         <span class="duoxuan">
+           å¤é
+         </span><!--duoxuan/-->
+         <input type="image" src="images/queding.png" class="queen2" />
+        </div><!--chilXBox-->
+       </div><!--chilXuan/-->
+      </li>
+      <li>
+       <a href="#">å±å¹è²å½©</a> 
+       <div class="chilXuan">
+        <div class="chilXBox">
+         <div><input type="checkbox" /><a href="#">éé¡¹1</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹2</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹3</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹4</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹5</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹6</a></div>
+         <div class="clears"></div>
+         <span class="duoxuan">
+           å¤é
+         </span><!--duoxuan/-->
+         <input type="image" src="images/queding.png" class="queen2" />
+        </div><!--chilXBox-->
+       </div><!--chilXuan/-->
+      </li>
+      <li>
+       <a href="#">åè¾¨ç</a> 
+       <div class="chilXuan">
+        <div class="chilXBox">
+         <div><input type="checkbox" /><a href="#">éé¡¹1</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹2</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹3</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹4</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹5</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹6</a></div>
+         <div class="clears"></div>
+         <span class="duoxuan">
+           å¤é
+         </span><!--duoxuan/-->
+         <input type="image" src="images/queding.png" class="queen2" />
+        </div><!--chilXBox-->
+       </div><!--chilXuan/-->
+      </li>
+      <li>
+       <a href="#">çµæ± å¯æå¸</a> 
+       <div class="chilXuan">
+        <div class="chilXBox">
+         <div><input type="checkbox" /><a href="#">éé¡¹1</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹2</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹3</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹4</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹5</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹6</a></div>
+         <div class="clears"></div>
+         <span class="duoxuan">
+           å¤é
+         </span><!--duoxuan/-->
+         <input type="image" src="images/queding.png" class="queen2" />
+        </div><!--chilXBox-->
+       </div><!--chilXuan/-->
+      </li>
+      <li>
+       <a href="#">åå¡åå¡</a> 
+       <div class="chilXuan">
+        <div class="chilXBox">
+         <div><input type="checkbox" /><a href="#">éé¡¹1</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹2</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹3</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹4</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹5</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹6</a></div>
+         <div class="clears"></div>
+         <span class="duoxuan">
+           å¤é
+         </span><!--duoxuan/-->
+         <input type="image" src="images/queding.png" class="queen2" />
+        </div><!--chilXBox-->
+       </div><!--chilXuan/-->
+      </li>
+      <li>
+       <a href="#">ææºåå­</a> 
+       <div class="chilXuan">
+        <div class="chilXBox">
+         <div><input type="checkbox" /><a href="#">éé¡¹1</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹2</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹3</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹4</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹5</a></div>
+         <div><input type="checkbox" /><a href="#">éé¡¹6</a></div>
+         <div class="clears"></div>
+         <span class="duoxuan">
+           å¤é
+         </span><!--duoxuan/-->
+         <input type="image" src="images/queding.png" class="queen2" />
+        </div><!--chilXBox-->
+       </div><!--chilXuan/-->
+      </li>
+      <div class="clearfix"></div>
+     </ul><!--xuan2/-->
+    </td>
+   </tr>
+  </table><!--proDSel/-->
+  <div style="height:15px;">&nbsp;</div>
+  <ul class="proSelect">
+   <li>ç»¼å</li>
+   <li>éé &darr;</li>
+   <li>è¯è®º &darr;</li>
+   <li>ä»·æ ¼ &darr;</li>
+   <div class="clears"></div>
+  </ul><!--proSelect/-->
+  <div class="phoneBox">
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone5.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone4.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone3.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone2.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone1.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone5.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone4.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone3.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone2.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone1.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone5.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone4.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone3.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone2.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone1.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone5.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone4.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone3.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone2.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <dl>
+    <dt><a href="buyinfo.html"><img src="images/phone1.png" /></a></dt>
+    <dd>
+     <h3>ï¿¥4800.00</h3>
+     <div class="phonePars">
+      Apple è¹æ iPhone 5s 16G TD-LTE/TD-SCDMA/WCDMA/GSM 4Gææº é
+     </div><!--phonePar/-->
+     <div class="xiaoliang">
+      <span class="blue">157451æ¡è¯ä»·</span>
+      <span class="pad">ä¸æµ·æè´§</span>
+     </div><!--xiaoliang/-->
+     <div class="jiaru-shoucang">
+      <span class="jiaruCar">å å¥è´­ç©è½¦</span>
+      <span class="shoucangCar"><a href="quanjing/index.html">éç¨æ­¤æ¨¡å</a></span>
+      <div class="clears"></div>
+     </div><!--jiaru-shoucang/-->
+    </dd>
+   </dl>
+   <div class="clears"></div>
+  </div><!--phoneBox/-->
+ </form><!--proDingzhi/-->
+ <div class="footBox">
+  <div class="footers">
+   <div class="footersLeft">
+    <a href="index.html"><img src="images/ftlogo.jpg" width="240" height="64" /></a>
+    <h3 class="ftphone">400 000 0000 </h3>
+    <div class="ftKe">
+     å®¢æ 7x24å°æ¶(å¨å¹´æ ä¼)<br />
+     <span>å®¢æé®ç®±ï¼kefu@webqin.net </span>
+    </div><!--ftKe/-->
+   </div><!--footersLeft/-->
+   <div class="footersRight">
+    <ul>
+     <li class="ftTitle">æ°ææå</li>
+     <li><a href="#">è´­ç©æµç¨</a></li>
+     <li><a href="#">ä¼åè®¡åååå</a></li>
+     <li><a href="#">ä¼æ å¸è§å</a></li>
+     <li><a href="#">èç³»å®¢æ</a></li>
+     <li><a href="#">å¸¸è§é®é¢</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ä»æ¬¾æ¹å¼</li>
+     <li><a href="#">å¨çº¿æ¯ä»</a></li>
+     <li><a href="#">ç¤¼åå¡æ¯ä»</a></li>
+     <li><a href="#">è´§å°ä»æ¬¾</a></li>
+     <li><a href="#">é¶è¡ä»æ¬¾</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ééæå¡</li>
+     <li><a href="#">ééæ¶æåè¿è´¹</a></li>
+     <li><a href="#">è¶æ¶èµä»</a></li>
+     <li><a href="#">éªè´§ä¸ç­¾æ¶</a></li>
+     <li><a href="#">éè´§ä¿¡æ¯è·è¸ª</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">å®åæå¡</li>
+     <li><a href="#">éæ¢è´§æ¿ç­</a></li>
+     <li><a href="#">éæ¢è´§åºå</a></li>
+     <li><a href="#">éæ¬¾æ¶é</a></li>
+     <li><a href="#">åè¡èµä»</a></li>
+     <li><a href="#">åç¥¨è¯´æ</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ç¹è²æå¡</li>
+     <li><a href="#">ç¤¼åå¡</a></li>
+     <li><a href="#">äº§åè¯ç¨</a></li>
+     <li><a href="#">è±ç²ä¸­å¿</a></li>
+     <li><a href="#">å¿«éè´­ç©</a></li>
+     <li><a href="#">æ¨èå¥½å</a></li>
+    </ul>
+    
+    <div class="clears"></div>
+   </div><!--footersRight/-->
+   <div class="clears"></div>
+  </div><!--footers/-->
+ </div><!--footBox/-->
+ <div class="footer" style="text-align:left;">
+  <a href="#">å³äºæä»¬</a>
+  <a href="#">åæé¾æ¥</a>
+  <a href="#">çæå£°æ</a>
+  <a href="#">ç½ç«å°å¾</a>
+  <br />
+  <span>&copy; 2014 Unqezi ä½¿ç¨åå¿è¯» æ²ªICPå¤ 12007626å·-1</span>
+ </div><!--footer/-->
+</body>
+</html>

@@ -1,0 +1,46 @@
+.menu{width:100%;height:45px;line-height:45px;background:#404145;z-index:999;position:relative;color:#ddd;margin-top:25px}
+.menu .item{float:left;text-align:center;position:relative;border-right:1px solid #6a6b6e}
+.menu .item a{color:#fff;font-size:16px;position:relative;display:inline-block;width:159px;font-weight:lighter}
+.menu .item a:hover,.menu .item a.on{color:#e83426;}
+.menu .item a.home{background:url(../images/home/ico11.jpg) no-repeat 30px center;padding-left:10px;width:149px}
+.menu .item a.nav{width:204px;background:url(../images/home/ico12.jpg) no-repeat 60px center #e83426;padding-left:30px}
+
+
+
+.menu .item a.nav{color:#fff}
+.menu .item .nav_son{position:absolute;top:45px;left:0;background:#fff;width:234px;min-height:350px;display:none;z-index:99;position:relative;top:0}
+.menu .item .nav_son li{line-height:43px;}
+
+.menu .item .nav_son li a{display:inline-block;border-bottom:1px solid #d35f64;background:#c63239;line-height:44px;padding-left:100px;text-align:left;width:134px}
+.menu .item .nav_son .li01 a{background:url(../images/home/ico41.png) no-repeat 60px center #c63239}
+.menu .item .nav_son .li02 a{background:url(../images/home/ico42.png) no-repeat 60px center #c63239}
+.menu .item .nav_son .li03 a{background:url(../images/home/ico43.png) no-repeat 60px center #c63239}
+.menu .item .nav_son .li04 a{background:url(../images/home/ico44.png) no-repeat 60px center #c63239}
+.menu .item .nav_son .li05 a{background:url(../images/home/ico45.png) no-repeat 60px center #c63239}
+.menu .item .nav_son .li06 a{background:url(../images/home/ico46.png) no-repeat 60px center #c63239}
+.menu .item .nav_son .li07 a{background:url(../images/home/ico47.png) no-repeat 60px center #c63239}
+.menu .item .nav_son .li08 a{background:url(../images/home/ico48.png) no-repeat 60px center #c63239}
+.menu .item .nav_son .li09 a{background:url(../images/home/ico49.png) no-repeat 60px center #c63239}
+.menu .item .nav_son .li10 a{background:url(../images/home/ico40.png) no-repeat 60px center #c63239}
+
+.menu .item .nav_son .li01 a:hover{background:url(../images/home/ico41b.png) no-repeat 60px center #fff}
+.menu .item .nav_son .li02 a:hover{background:url(../images/home/ico42b.png) no-repeat 60px center #fff}
+.menu .item .nav_son .li03 a:hover{background:url(../images/home/ico43b.png) no-repeat 60px center #fff}
+.menu .item .nav_son .li04 a:hover{background:url(../images/home/ico44b.png) no-repeat 60px center #fff}
+.menu .item .nav_son .li05 a:hover{background:url(../images/home/ico45b.png) no-repeat 60px center #fff}
+.menu .item .nav_son .li06 a:hover{background:url(../images/home/ico46b.png) no-repeat 60px center #fff}
+.menu .item .nav_son .li07 a:hover{background:url(../images/home/ico47b.png) no-repeat 60px center #fff}
+.menu .item .nav_son .li08 a:hover{background:url(../images/home/ico48b.png) no-repeat 60px center #fff}
+.menu .item .nav_son .li09 a:hover{background:url(../images/home/ico49b.png) no-repeat 60px center #fff}
+.menu .item .nav_son .li10 a:hover{background:url(../images/home/ico40b.png) no-repeat 60px center #fff}
+.menu .item .nav_son li a:hover{text-decoration:underline;color:#404145}
+
+.menu .item .nav_son .hover{background:#fff;position:absolute;left:234px;top:0;height:450px;width:960px;text-align:left;z-index:9999;display:none}
+.menu .item .nav_son .hover div{display:none}
+.menu .item .nav_son .hover a{background:none;border:none;padding:0;width:auto;color:#000;font-size:12px;margin-right:35px;line-height:30px}
+.menu .item .nav_son .hover a:hover,.menu .item .nav_son .hover a.red{color:#ea3c1f}
+.menu .item .nav_son .hover dl{padding:10px 30px;clear:both}
+.menu .item .nav_son .hover dt{color:#404145;float:left;font-weight:bold;width:200px;line-height:30px}
+.menu .item .nav_son .hover dd{float:left;width:820px;border-bottom:1px solid #eee;padding-bottom:10px}
+
+.w1200{width:1200px;margin:0 auto}

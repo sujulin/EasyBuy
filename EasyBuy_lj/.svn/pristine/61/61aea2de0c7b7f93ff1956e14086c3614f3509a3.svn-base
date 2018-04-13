@@ -1,0 +1,56 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>unique</title>
+<link type="text/css" href="css/css.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+</head>
+
+<body>
+ <div class="hrader">
+  <a href="login.html" style="color:#FD7306;margin-left:20px;">è¯·ç»å½</a> 
+  <a href="reg.html">æ³¨å</a>
+  <div class="topNav">
+   <a href="index.html" style="color:#FD7306;">é¦é¡µ</a>
+   <a href="buy.html">ä¹°å®¶</a>
+   <a href="sell.html">åå®¶</a>
+   <a href="vip.html">ä¼åä¸­å¿</a>
+   <a href="xuanshang.html">æ¬èµæ¦</a>
+   <a href="luntan.html" class="luntan">è®ºå</a>
+   <a href="help.html">å¸®å©</a>
+   <a href="#">&nbsp;</a>
+   <a href="#" class="lan">ä¸­æ</a>
+   <a href="#" class="lan">English</a>
+  </div><!--topNav/-->
+ </div><!--hrader/-->
+ <div class="inCont">
+  <h1 class="logo"><a href="index.html"><img src="images/logo.png" width="304" height="74" /></a></h1>
+  <form class="select" action="prolist.html" method="get">
+   <div>
+    <input type="text" value="è¯·è¾å¥ä½ éè¦çäº§å" class="selName" onFocus=OnEnter(this) onBlur=OnExit(this) />
+    <input type="image" src="images/sub.png" width="99" height="36" class="sel" />
+   </div>
+  </form><!--select/-->
+  <div class="ban">
+   <a href="prolist.html"><img src="images/phone.png" /></a>
+  </div><!--ban/-->
+ </div><!--inCont/-->
+ <div class="footer">
+  <a href="#">å³äºæä»¬</a>
+  <a href="#">åæé¾æ¥</a>
+  <a href="#">çæå£°æ</a>
+  <a href="#">ç½ç«å°å¾</a>
+  <br />
+  <span>&copy; 2014 Unqezi ä½¿ç¨åå¿è¯» æ²ªICPå¤ 12007626å·-1</span>
+ </div><!--footer/-->
+</body>
+</html>

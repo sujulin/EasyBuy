@@ -1,0 +1,10 @@
+package cn.easybuy.dao;
+
+import cn.easybuy.entity.Phoneinfo;
+
+public interface PhoneInfoDao {
+
+	
+	public Phoneinfo getItemsById(int pid);
+	
+}

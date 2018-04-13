@@ -1,0 +1,218 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%
+	String path = request.getContextPath();
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>unique</title>
+<link type="text/css" href="css/css.css" rel="stylesheet" />
+<script type="text/javascript" src="js/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/js.js"></script>
+
+<!--çå¸æµææ-->
+
+<script type="text/javascript" src="js/js/notification.js"></script>
+<script type="text/javascript" src="js/js/bigimg.js"></script>
+<script type="text/javascript" src="js/js/jquery.lazyload.min.js" ></script>
+<script type="text/javascript" src="js/js/blocksit.min.js"></script>
+<script type="text/javascript" src="js/js/pubu.js"></script>
+<link rel="stylesheet" href="css/css/bigimg.css" type="text/css"/>
+<link rel="stylesheet" href="css/css/pubu.css" type="text/css" media='screen'/>
+</head>
+
+<body style="background:url(images/bgg.jpg)">
+ <div class="hrader" id="header" style="background:url(images/bgtouming.png);border:0;">
+  <div class="top" id="top">
+   <a href="login.html" style="color:#C94E13;">è¯·ç»å½</a> 
+   <a href="reg.html">æ³¨å</a>
+   <ul class="topNav">
+     <li><a href="order.html">æçè®¢å </a></li>
+    <li class="gouwuche"><a href="car.html">è´­ç©è½¦</a> <strong style="color:#C94E13;">3</strong></li>
+    <li class="shoucangjia"><a href="shoucang.html">æ¶èå¤¹</a></li>
+    <li class="kefus"><a href="#">èç³»å®¢æ</a></li>
+    <li><a href="#" class="lan">ä¸­æ</a></li>
+    <li><a href="#" class="lan">English</a></li>
+    <div class="clears"></div>
+   </ul><!--topNav/-->
+  </div><!--top/-->
+ </div><!--hrader/-->
+ <div class="mid">
+  <h1 class="logo" style="text-align:left;">
+  <a href="index.html"><img src="images/logo2.png" width="304" height="74" /></a>
+  </h1>
+  <form action="#" method="get" class="subBox">
+   <div class="subBox2" id="subBox2">
+    <input type="text" class="subText" />
+    <input type="submit"  value=" æ ç´¢ " class="subImg" />
+    <div class="hotci">
+    <a href="#">é·æ´¾å¤§ç¥</a>
+    <a href="#">ä¸æs5</a>
+    <a href="#">è¯ºåºäº1020</a>
+    <a href="#">Iphone 6</a>
+    <a href="#">htc one</a>
+   </div><!--hotci/-->
+   </div><!--subBox2/-->
+  </form><!--subBox/-->
+  <div class="ding-gou" id="ding-gou">
+   <div class="ding">
+    <a href="order.html"><img src="images/tu1.gif" /> æçè®¢å</a>
+   </div><!--ding/-->
+   <div class="gou">
+    <a href="car.html"><img src="images/tu2.gif" /> å»è´­ç©è½¦ç»ç®</a>
+   </div><!--gou/-->
+   <div class="clears"></div>
+  </div><!--ding-gou/-->
+ </div><!--mid-->
+ <div class="navBox navBg1">
+  <ul class="nav" id="navs">
+   <li><a href="index.html">é¦é¡µ</a></li>
+   <li><a href="buy.html">ä¹°å®¶</a></li>
+   <li><a href="sell.html">åå®¶</a></li>
+   <li><a href="vip.html">ä¼åä¸­å¿</a></li>
+   <li class="navCur"><a href="xuanshang.html">æ¬èµæ¦</a></li>
+   <li><a href="luntan.html" class="luntan">è®ºå</a></li>
+   <li><a href="help.html">å¸®å©</a></li>
+   <div class="clears"></div>
+  </ul><!--nav/-->
+ </div><!--navBox/-->
+ <div class="xuanshang">
+  <div class="xuaninfo">
+   <div class="xuanJIn">
+    <div class="xuanJinLeft">
+     <img src="images/step_01.png" width="403" height="48" />
+     <div class="xjTime">
+      éæ å¼å§æ¶é´ï¼<span>2014-10-31 11:30</span>      éæ æªæ­¢æ¶é´ï¼<span>2014-11-10 11:30</span>
+     </div><!--xjTime/-->
+     <div class="xjTeme2">
+      <h3>æ¶é´æé</h3>
+      éä¸»å·²éåºä¸­æ ä½åå¹¶æäº¤å®¢æå®¡æ ¸ï¼æææäº¤ä½åå¬ç¤ºï¼è¿æ<span>1å¤©9å°æ¶</span> ãå¨æ­¤æé´å¦åç°ä¸­æ ä½åä¸ºä½ å¼/æè¢­ï¼å¯åå®¢æä¸¾æ¥/æè¯
+     </div><!--/-->
+     <div class="xjTeme2" style="margin-top:7px;">
+      <h3>æç¤º</h3>
+     uniqueå·²æ¶å°éä¸»çä»»å¡æ¬¾ï¼ç¡®ä¿ä»»å¡ç»æåï¼ä¸­æ èè½æ¶å°ä»»å¡æ¬¾
+     </div><!--/-->
+    </div><!--xuanJinLeft/-->
+    <div class="xuanJinRight">
+     <ul>
+      <li>ä¸­æ æå¾ï¼500.00å(ä»»å¡éé¢) Ã 80% = <strong>400.00</strong> å</li>
+      <li>é«çº§uniqueï¼500.00å(ä»»å¡éé¢) Ã 81% = <strong>405.00</strong> å</li>
+      <li>ä»»å¡åºå·ï¼91648</li>
+     </ul>
+     <a class="shenqing" href="#">ç«å³ç³è¯·</a>
+     <h3 class="xstitle">æ¬èµè¯¦æ</h3>
+     <ul>
+      <li>ä¸­æ æ¨¡å¼ï¼åäººä¸­æ       å®¢æå®¡ä¸­æ å©ä½æ¶é´ï¼  1å¤©9å°æ¶</li>
+      <li>åä¸æåµï¼å·²æ 1723 äººå³æ³¨      28 äººåå       28 ä¸ªæäº¤</li>
+      <li>æ»æµè§äººæ°ï¼5</li>
+     </ul>
+    </div><!--xuanJinRight/-->
+    <div class="clearfix"></div>
+   </div><!--xuanJIn/-->
+   <div class="xle">
+    <h1>ä»»å¡è¯¦æ</h1>
+    <div class="xuaninfoPar">
+     è®¾è®¡äº§ååè£çï¼äº§åä¸ºå¸èºdiyææå<br /> 
+è¦æ±ï¼ <br />
+1.åè£çå°ºå¯¸ä¸ºï¼å®½14.5cmï¼é«21cmï¼ååº¦2.5cmï¼å¿é¡»å¯ä»¥ææ¾ï¼ <br />
+2.å°½éä»¥ç²è²ä¸ºä¸»åºè°ï¼æ¸©é¦¨å¤§æ¹æ¶å°ï¼ <br />
+3.å¨æ­£é¢çåº10*10cmçå¤§å°ï¼è§åèå¾ï¼ï¼ <br />
+4.æ­£é¢äº§ååç§°ä¸ºï¼âæ¼æ¼ä¹ç®å¼æ¼å¸æå·¥diyææåâï¼åé¢åå®¹ä¸ºï¼âä½¿ç¨æ³¨æäºé¡¹ *æ¬åååå«ç»å°ç©ä»¶ï¼è¯·ç½®äºå®å¨å¤ï¼ä»¥åå­©ç«¥è¯¯é£ *æ¬äº§åé¤äºç»æ¶è´¹èå¸¦éçº¿å¤ï¼å¶ä½å·¥å·è¯·å¦è¡è´­ä¹° åéè¯´æä¹¦&å®ç©å¤§å°å¾ å¾çä»ä½åèï¼ä»¥å®ééè²ä¸ºåâ 
+5.äº§ålogoè§éä»¶ï¼ <br />
+6.å¦æä¸æå¤è¯·èç³»QQï¼000000.<br /><br />ä»å·ä½å¸åºæåæ¥çï¼é¦ä½ç
+ä¸æåºè´§éä¸º5630ä¸é¨ï¼å¸åºä»½é¢ä¸º
+31.3%ï¼è¹æä½åç¬¬äºï¼åºè´§éä¸º2690ä¸
+é¨ï¼å¸åºä»½ä»å·ä½å¸åºæåæ¥çï¼é¦ä½ç
+ä¸æåºè´§éä¸º5630ä¸é¨ï¼å¸åºä»½é¢ä¸º
+31.3%ï¼è¹æä½åç¬¬äºï¼åºè´§éä¸º2690ä¸
+é¨ï¼å¸åºä»½ä»å·ä½å¸åºæåæ¥çï¼é¦ä½ç
+ä¸æåºè´§éä¸º5630ä¸é¨ï¼å¸åºä»½é¢ä¸º
+31.3%ï¼è¹æä½åç¬¬äºï¼åºè´§éä¸º2690ä¸
+é¨ï¼å¸åºä»½ä»å·ä½å¸åºæåæ¥çï¼é¦ä½ç
+ä¸æåºè´§éä¸º5630ä¸é¨ï¼å¸åºä»½é¢ä¸º
+31.3%ï¼è¹æä½åç¬¬äºï¼åºè´§éä¸º2690ä¸
+é¨ï¼å¸åºä»½ä»å·ä½å¸åºæåæ¥çï¼é¦ä½ç
+ä¸æåºè´§éä¸º5630ä¸é¨ï¼å¸åºä»½é¢ä¸º
+31.3%ï¼è¹æä½åç¬¬äºï¼åºè´§éä¸º2690ä¸
+é¨ï¼å¸åºä»½. 
+    </div><!--xuaninfoPar/-->
+    <div class="jinggao">
+     ä»»ä½å½¢å¼çæè¢­æèå¼è¡ä¸ºï¼ä¸ç»åç°åä¼åå°ä¸¥æ©ï¼å¹¶ä¿çè¿½ç©¶æ³å¾è´£ä»»çæå©ï¼<br />
+å¨ä»»å¡ç»æåï¼ææä½åï¼åæ¬é«çº§uniqueç¨æ·ä¿å¯æäº¤çä½åï¼å°ä¼å¬å¼å±ç¤º10å¤©ï¼<br />
+éä¸»ä¸å¾å¨ä»»å¡åå¸æé´éæåæ´ä»»å¡åå®¹ï¼ä»»ä½æ°å¢å·¥ä½éçä¿®æ¹ä»»å¡ä¸­å½ææé©³å<br />
+    </div>
+   </div><!--xle/-->
+  </div><!--xuaninfo/--> 
+ </div><!--xuanBox/-->
+  
+  <div class="clearfix"></div>
+ </div><!--xuanshang/-->
+ <div class="footBox" style="background:url(images/bgtouming.png);border:0;">
+  <div class="footers">
+   <div class="footersLeft">
+    <a href="index.html"><img src="images/ftlogo.png" width="240" height="64" /></a>
+    <h3 class="ftphone">400 000 0000 </h3>
+    <div class="ftKe">
+     å®¢æ 7x24å°æ¶(å¨å¹´æ ä¼)<br />
+     <span>å®¢æé®ç®±ï¼kefu@webqin.net </span>
+    </div><!--ftKe/-->
+   </div><!--footersLeft/-->
+   <div class="footersRight">
+    <ul>
+     <li class="ftTitle">æ°ææå</li>
+     <li><a href="#">è´­ç©æµç¨</a></li>
+     <li><a href="#">ä¼åè®¡åååå</a></li>
+     <li><a href="#">ä¼æ å¸è§å</a></li>
+     <li><a href="#">èç³»å®¢æ</a></li>
+     <li><a href="#">å¸¸è§é®é¢</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ä»æ¬¾æ¹å¼</li>
+     <li><a href="#">å¨çº¿æ¯ä»</a></li>
+     <li><a href="#">ç¤¼åå¡æ¯ä»</a></li>
+     <li><a href="#">è´§å°ä»æ¬¾</a></li>
+     <li><a href="#">é¶è¡ä»æ¬¾</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ééæå¡</li>
+     <li><a href="#">ééæ¶æåè¿è´¹</a></li>
+     <li><a href="#">è¶æ¶èµä»</a></li>
+     <li><a href="#">éªè´§ä¸ç­¾æ¶</a></li>
+     <li><a href="#">éè´§ä¿¡æ¯è·è¸ª</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">å®åæå¡</li>
+     <li><a href="#">éæ¢è´§æ¿ç­</a></li>
+     <li><a href="#">éæ¢è´§åºå</a></li>
+     <li><a href="#">éæ¬¾æ¶é</a></li>
+     <li><a href="#">åè¡èµä»</a></li>
+     <li><a href="#">åç¥¨è¯´æ</a></li>
+    </ul>
+    <ul>
+     <li class="ftTitle">ç¹è²æå¡</li>
+     <li><a href="#">ç¤¼åå¡</a></li>
+     <li><a href="#">äº§åè¯ç¨</a></li>
+     <li><a href="#">è±ç²ä¸­å¿</a></li>
+     <li><a href="#">å¿«éè´­ç©</a></li>
+     <li><a href="#">æ¨èå¥½å</a></li>
+    </ul>
+    
+    <div class="clears"></div>
+   </div><!--footersRight/-->
+   <div class="clears"></div>
+  </div><!--footers/-->
+ </div><!--footBox/-->
+ <div class="footer" style="text-align:left;">
+  <a href="#">å³äºæä»¬</a>
+  <a href="#">åæé¾æ¥</a>
+  <a href="#">çæå£°æ</a>
+  <a href="#">ç½ç«å°å¾</a>
+  <br />
+  <span>&copy; 2014 Unqezi ä½¿ç¨åå¿è¯» æ²ªICPå¤ 12007626å·-1</span>
+ </div><!--footer/-->
+</body>
+</html>

@@ -1,0 +1,41 @@
+package cn.easybuy.dao.impl;
+
+import java.sql.ResultSet;
+
+import cn.easybuy.dao.BaseDao;
+import cn.easybuy.dao.UserinfoDao;
+import cn.easybuy.entity.Userinfo;
+
+
+public class UserinfoDaoimpl extends BaseDao implements UserinfoDao {
+
+	//�жϵ�½�ķ���
+	public boolean islogin(Userinfo info) throws Exception {
+		boolean flag=false;
+		String sql="select count(1) as count from easybuy_lj_user_info where loginName=? and password=?";
+		Object[] obj={info.getLoginName(),info.getPassword()};
+		ResultSet rs=executeQuery(sql,obj);
+		if(rs.next()){
+			int count=rs.getInt("count");
+			if(count>0){
+				flag=true;
+			}
+		}
+		return flag;
+	}
+
+	public int updatePassword(Userinfo info) throws Exception {
+		String sql = "UPDATE easybuy_lj_user_info SET PASSWORD=? WHERE loginName=?";
+		Object[] paras = {info.getPassword(),info.getLoginName()};
+		int count = executeUpdate(sql, paras);
+		if (count > 0) {
+			System.out.println("修改成功");
+		}
+		return count;
+		
+		
+	}
+
+	
+
+}

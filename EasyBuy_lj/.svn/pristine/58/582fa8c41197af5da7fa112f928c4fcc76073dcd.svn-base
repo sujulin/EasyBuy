@@ -1,0 +1,12 @@
+package cn.easybuy.dao;
+
+import java.util.List;
+
+import cn.easybuy.entity.ProListfenji;
+
+public interface ProListfenjiDao {
+//三级的第一级
+	public List<ProListfenji> findAll() throws Exception;
+	//三级的第二级和第三级
+	public List<ProListfenji> findPart(int id)throws Exception;
+}

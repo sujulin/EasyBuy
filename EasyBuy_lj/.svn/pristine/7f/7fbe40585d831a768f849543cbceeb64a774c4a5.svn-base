@@ -1,0 +1,7 @@
+package cn.easybuy.service;
+
+import cn.easybuy.entity.Userinfo;
+
+public interface UserinfoService {
+	public boolean islogin(Userinfo info) throws Exception;
+}

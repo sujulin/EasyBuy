@@ -1,0 +1,258 @@
+package cn.easybuy.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+
+import cn.easybuy.dao.PhoneInfoDao;
+import cn.easybuy.dao.RegisterinfoDao;
+import cn.easybuy.dao.impl.PhoneInfoDaoimpl;
+import cn.easybuy.dao.impl.RegisterinfoDaoimpl;
+import cn.easybuy.entity.Cart;
+import cn.easybuy.entity.Phoneinfo;
+import cn.easybuy.entity.Prolist;
+import cn.easybuy.entity.Userinfo;
+import cn.easybuy.service.PhoneInfoService;
+import cn.easybuy.service.ProlistinfoService;
+import cn.easybuy.service.impl.PhoneInfoServiceimpl;
+import cn.easybuy.service.impl.prolistinfoServiceImpl;
+
+
+
+public class PhoneInfoServlet extends HttpServlet {
+
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	private String action ; //表示购物车的动作 ,add,show,delete
+	//商品业务逻辑类的对象
+	private PhoneInfoDaoimpl idao = new PhoneInfoDaoimpl() ;
+		
+	public PhoneInfoServlet() {
+		super();
+	}
+
+	/**
+	 * Destruction of the servlet. <br>
+	 */
+	public void destroy() {
+		super.destroy(); // Just puts "destroy" string in log
+		// Put your code here
+	}
+
+	
+
+
+	public void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+   doPost(request,response);
+   
+	}
+
+	
+	public void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+/*
+		 String detail=request.getParameter("detail");
+		    int bookid=Integer.parseInt(request.getParameter("bookid"));
+		    BookInfoDomain book=new BookInfoDomainImpl();
+		    Map<String, BookInfoBean>map1= book.queryDetail(bookid);
+		    Map map=new HashMap();
+		    map.put("bookid", ""+bookid);
+		    List<CommentBean> list1= new CommentDomainImpl().queryByCondition(map);
+		    request.setAttribute("list1", list1);
+			request.setAttribute("map1", map1);
+			if(detail==null){
+				return "bookinfo.jsp";
+			}
+			else{
+				
+				
+			}return "bookdetail.jsp";
+				
+		
+		*/
+		
+		
+	/*	
+		System.out.println("hao");
+		
+		
+		String info = request.getParameter("info");
+		int pid = Integer.parseInt(request.getParameter("pid"));
+		PhoneInfoService phone = new PhoneInfoServiceimpl();
+	    List<Phoneinfo> map1 = phone.Select(pid);
+		List map = new ArrayList();
+		map.put("pid");
+	
+			
+				list1 = new prolistinfoServiceImpl().findAll();
+				request.setAttribute("list1", list1);
+				request.setAttribute("map1", map1);
+	
+	*/
+		 
+		
+		/*String action=request.getParameter("action");
+		System.out.println(action);
+	Phoneinfo info=new Phoneinfo();
+		PhoneInfoDao dao=new PhoneInfoDaoimpl();
+		if(action.equals("Select")){
+			
+			String name = request.getParameter("name");
+			
+			String description = request.getParameter("description");
+			
+			
+			int number = Integer.parseInt(request.getParameter("number"));
+			
+			int count = Integer.parseInt(request.getParameter("count"));
+			
+			
+			String price = request.getParameter("price");
+			
+			info.setName(name);
+			info.setDescription(description);
+			info.setDescription(description);
+			info.setNumber(number);
+			info.setCount(count);
+			info.setPrice(price);
+			
+			
+			
+		}
+		PhoneInfoService service=new PhoneInfoServiceimpl();
+		List<Phoneinfo> list=service.Select(pid);
+		request.setAttribute("list", list);
+		request.getRequestDispatcher("/buyinfo.jsp").forward(request,response);
+	
+}catch(SQLException e){
+	e.printStackTrace();
+	
+} catch (Exception e) {
+	// TODO Auto-generated catch block
+	e.printStackTrace();
+}
+		*/
+		
+		
+		System.out.println("22222");
+		System.out.println(action);
+		response.setContentType("text/html;charset=utf-8");
+		PrintWriter out = response.getWriter();
+		if(request.getParameter("action")!=null)
+		{
+			this.action = request.getParameter("action");
+			if(action.equals("add")) //如果是添加商品进购物车
+			{
+				System.out.println("add");
+				if(addToCart(request,response))
+				{
+					System.out.println("成功");
+					request.getRequestDispatcher("/success.jsp").forward(request, response);
+				}
+				else
+				{
+					System.out.println("失败");
+					request.getRequestDispatcher("/failure.jsp").forward(request, response);
+				}
+			}
+			if(action.equals("show"))//如果是显示购物车
+			{
+				request.getRequestDispatcher("/car.jsp").forward(request, response);
+			}
+			if(action.equals("delete")) //如果是执行删除购物车中的商品
+			{
+				if(deleteFromCart(request,response))
+				{
+					request.getRequestDispatcher("/car.jsp").forward(request, response);
+				}
+				else
+				{
+					request.getRequestDispatcher("/car.jsp").forward(request, response);
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+	
+	}
+	
+	private boolean addToCart(HttpServletRequest request, HttpServletResponse response)
+	{
+		
+		System.out.println(action);
+		String id = request.getParameter("id");
+		System.out.println(id);
+		String number = request.getParameter("num");
+		System.out.println(number);
+		Phoneinfo item = idao.getItemsById(Integer.parseInt(id));
+		
+		
+		
+		//是否是第一次给购物车添加商品,需要给session中创建一个新的购物车对象
+		if(request.getSession().getAttribute("cart")==null)
+		{
+			Cart cart = new Cart();
+			request.getSession().setAttribute("cart",cart);
+		}
+		Cart cart = (Cart)request.getSession().getAttribute("cart");
+		if(cart.addGoodsInCart(item, Integer.parseInt(number)))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+		
+		
+	}
+	
+	//从购物车中删除商品
+	private boolean deleteFromCart(HttpServletRequest request, HttpServletResponse response)
+	{
+		String id = request.getParameter("id");
+		Cart cart = (Cart)request.getSession().getAttribute("cart");
+	   Phoneinfo item = idao.getItemsById(Integer.parseInt(id));
+	    if(cart.removeGoodsFromCart(item))
+	    {
+	    	return true;
+	    }
+	    else
+	    {
+	    	return false;
+	    }
+	
+	}
+	
+	/**
+	 * Initialization of the servlet. <br>
+	 *
+	 * @throws ServletException if an error occurs
+	 */
+	public void init() throws ServletException {
+		// Put your code here
+	}
+
+	
+
+}
